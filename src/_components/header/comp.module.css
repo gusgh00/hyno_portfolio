@@ -1,0 +1,60 @@
+.header {
+    width: 100%;
+    height: 60px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    z-index: 100;
+
+    .header_inner {
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .hamburger_btn,
+        .color_scheme_btn {
+            width: 40px;
+            height: 100%;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+
+            .icon {
+                width: 30px;
+                height: 30px;
+
+                transform: rotate(0deg);
+                transition: transform 0.2s;
+            }
+
+            &:active {
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &:hover {
+                background: var(--secondary);
+            }
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}

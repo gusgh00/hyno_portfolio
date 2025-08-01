@@ -19,7 +19,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@css/*": ["./assets/css/*"],
+      "@components/*": ["./src/_components/*"],
+      "@imgs/*": ["./assets/imgs/*"],
+      "@interfaces/*": ["./src/_items/_interfaces/*"],
+      "@items/*": ["./src/_items/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
