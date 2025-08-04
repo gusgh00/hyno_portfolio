@@ -109,7 +109,7 @@ export default function Home() {
               <div className={styles.card}>
                 <div className={styles.card_bot}>
                   <span className={styles.card_text}>
-                    음원 클라우딩 플랫폼의 UI/UX 개선, SEO 강화, 백오피스 개발 등 SaaS 서비스 운영
+                    음원 클라우딩 플랫폼 및 백오피스 SaaS 서비스 운영, 오디오 에셋 판매 및 퍼블리싱 자동화 시스템 개발 등
                   </span>
                   <FaPlayCircle className={styles.card_icon} />
                 </div>
@@ -118,7 +118,8 @@ export default function Home() {
               <div className={styles.card}>
                 <div className={styles.card_bot}>
                   <span className={styles.card_text}>
-                    게임 오디오 에셋 판매처 등록 및 퍼블리싱 자동화 시스템 개발, ffmpeg 플러그인 활용 음원 컨버팅 시스템 개발 등
+                    대학교 캡스톤 프로젝트 최우수상 수상.<br/>
+                    외주 웹페이지 기획 및 개발 경험.
                   </span>
                   <FaPlayCircle className={styles.card_icon} />
                 </div>
@@ -214,9 +215,9 @@ export default function Home() {
           <span className="inner_title">전체</span>
           <div className={styles.music_section}>
             <div className={styles.header_sort}>
-              <span className={styles.sort}>이름</span>
-              <span className={styles.sort}>대표명</span>
-              <span className={styles.sort}>프로덕트</span>
+              <span className={styles.sort}>TITLE</span>
+              <span className={styles.sort}>OWNER</span>
+              <span className={styles.sort}>PRODUCT</span>
             </div>
             {isAllList.map((item, index) => (
               <div key={index}>

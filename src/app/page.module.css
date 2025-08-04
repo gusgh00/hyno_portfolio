@@ -16,9 +16,9 @@
                 gap: 40px;
 
                 .card {
-                    width: 340px;
+                    width: 360px;
                     height: auto;
-                    padding: 20px 20px;
+                    padding: 20px 10px;
 
                     border-radius: 30px;
                     background-image: radial-gradient(circle farthest-corner at 1.9% 5%, rgba(153, 64, 246, 1) 0%, rgba(248, 66, 228, 1) 90%);
@@ -241,6 +241,9 @@
                         .card_img {
                             width: 40px;
                             height: 40px;
+
+                            transform: scale(1);
+                            transition: transform 2s;
                         }
                     }
 
@@ -252,6 +255,10 @@
                     &:hover {
                         background: radial-gradient(circle farthest-corner at 1.9% 5%, rgba(153, 64, 246, 1) 0%, rgba(248, 66, 228, 1) 90%);
                         color: #ededed;
+
+                        .card_img {
+                            transform: scale(1.2);
+                        }
                     }
                 }
             }
