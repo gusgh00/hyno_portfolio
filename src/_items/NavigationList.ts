@@ -7,34 +7,58 @@ export const navigationList: NavigationListInterface[] = [
     },
     {
         name: "TECH STACK",
-        href: "#tech_stack",
+        href: "#page_01",
         sub: [
             {
                 name: "STACK LIST",
-                href: "#stack_list"
+                href: "#page_01_01"
             },
         ]
     },
     {
         name: "CAREER",
-        href: "#career",
+        href: "#page_02",
         sub: [
             {
                 name: "BEAT SOMEONE",
-                href: "#beat_someone"
+                href: "#page_02_01"
             },
             {
                 name: "EXIT",
-                href: "#exit"
+                href: "#page_02_02"
             },
         ]
     },
     {
         name: "PROJECT",
-        href: "#project"
+        href: "#page_03",
+        sub: [
+            {
+                name: "케바케",
+                href: "#page_03_01"
+            },
+            {
+                name: "개미굴 가이드",
+                href: "#page_03_02"
+            },
+        ]
     },
     {
-        name: "SELF INTRODUCTION",
-        href: "#self"
+        name: "INTRODUCTION",
+        href: "#page_04",
+        sub: [
+            {
+                name: "EXPERIENCE",
+                href: "#page_04_01"
+            },
+            {
+                name: "PERSONALITY",
+                href: "#page_04_02"
+            },
+            {
+                name: "MY PLAN",
+                href: "#page_04_03"
+            },
+        ]
     },
 ]
