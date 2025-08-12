@@ -16,6 +16,10 @@ export const stackList = [
         img: "https://bestofjs.org/logos/vuetify.svg"
     },
     {
+        name: "zustand",
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg"
+    },
+    {
         name: "HTML5",
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
     },
