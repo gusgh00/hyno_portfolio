@@ -5,6 +5,7 @@ import LogoLight from "@imgs/logo_light.png";
 import styles from "./comp.module.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [isSchemeType, setSchemeType] = useState<boolean>(false)
@@ -38,9 +39,9 @@ const Header = () => {
           </div>
           <div className={styles.navi_section}>
             {navigationList.map((item, index) => (
-              <span key={index} className={styles.navi}>
+              <Link href={item.href} key={index} className={styles.navi}>
                 {item.name}
-              </span>
+              </Link>
             ))}
           </div>
         </div>

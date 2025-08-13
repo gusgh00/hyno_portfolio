@@ -3,11 +3,16 @@
     height: 90px;
 
     position: fixed;
+    top: 0;
+    z-index: 100;
+
+    background: transparent;
+    background: var(--bgColor-gradient-up);
 
     .header_main {
         width: 100%;
         height: 90px;
-        padding: 0 20px;
+        padding: 0 40px;
 
         display: flex;
         align-items: center;
@@ -23,16 +28,14 @@
             align-items: center;
             justify-content: center;
 
+            background-color: transparent;
+
             transition: background 0.2s;
             cursor: pointer;
 
             .logo {
                 width: 78px;
                 height: 78px;
-            }
-
-            &:hover {
-                background-color: var(--bgColor-opacity);
             }
         }
 
@@ -42,18 +45,20 @@
 
             .navi {
                 padding: 5px 20px;
-                font-size: 20px;
+                font-size: 14px;
                 font-weight: 700;
 
                 border-radius: 10px;
 
                 background-color: transparent;
+                border: solid .5px transparent;
 
                 transition: background 0.2s;
                 cursor: pointer;
 
                 &:hover {
                     background-color: var(--bgColor-opacity);
+                    border: solid .5px var(--borderColor-disabled);
                 }
             }
         }

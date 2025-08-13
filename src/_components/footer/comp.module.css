@@ -1,0 +1,64 @@
+.footer {
+    width: 100%;
+    height: 90px;
+
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+
+    background: transparent;
+    background: var(--bgColor-gradient-down);
+
+    .footer_main {
+        width: 100%;
+        height: 90px;
+        padding: 0 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .copyright {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .contact_section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .contact {
+                padding: 5px 20px;
+
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                border-radius: 10px;
+
+                background-color: transparent;
+                border: solid .5px transparent;
+
+                transition: background 0.2s;
+                cursor: pointer;
+
+                .icon {
+                    width: 28px;
+                    height: 28px;
+
+                    color: var(--default);
+                }
+
+                .text {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                &:hover {
+                    background-color: var(--bgColor-opacity);
+                    border: solid .5px var(--borderColor-disabled);
+                }
+            }
+        }
+    }
+}
