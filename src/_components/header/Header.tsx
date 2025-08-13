@@ -31,7 +31,7 @@ const Header = () => {
     <>
       <header className={styles.header}>
         <div className={styles.header_main}>
-          <div className={styles.header_title}>
+          <div className={styles.header_title} onClick={() => router.push("/")}>
             {!isSchemeType
             ?
             <Image src={LogoLight} alt="logo_light" className={styles.logo}/>
