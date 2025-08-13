@@ -6,8 +6,10 @@ import styles from "./comp.module.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter()
   const [isSchemeType, setSchemeType] = useState<boolean>(false)
 
   useEffect(() => {
@@ -39,9 +41,9 @@ const Header = () => {
           </div>
           <div className={styles.navi_section}>
             {navigationList.map((item, index) => (
-              <Link href={item.href} key={index} className={styles.navi}>
+              <div key={index} className={styles.navi} onClick={() => router.push(item.url)}>
                 {item.name}
-              </Link>
+              </div>
             ))}
           </div>
         </div>

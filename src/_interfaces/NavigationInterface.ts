@@ -5,6 +5,6 @@ export interface SubNavigationListInterface {
 
 export interface NavigationListInterface {
     name: string,
-    href: string,
+    url: string,
     sub?: SubNavigationListInterface[]
 }

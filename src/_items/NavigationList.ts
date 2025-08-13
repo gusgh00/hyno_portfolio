@@ -3,11 +3,11 @@ import { NavigationListInterface } from "../_interfaces/NavigationInterface";
 export const navigationList: NavigationListInterface[] = [
     {
         name: "HOME",
-        href: "#home"
+        url: "/"
     },
     {
         name: "TECH STACK",
-        href: "#page_01",
+        url: "/tech_stack",
         sub: [
             {
                 name: "STACK LIST",
@@ -17,7 +17,7 @@ export const navigationList: NavigationListInterface[] = [
     },
     {
         name: "CAREER",
-        href: "#page_02",
+        url: "/career",
         sub: [
             {
                 name: "BEAT SOMEONE",
@@ -31,7 +31,7 @@ export const navigationList: NavigationListInterface[] = [
     },
     {
         name: "PROJECT",
-        href: "#page_03",
+        url: "/project",
         sub: [
             {
                 name: "케바케",
@@ -45,7 +45,7 @@ export const navigationList: NavigationListInterface[] = [
     },
     {
         name: "INTRODUCTION",
-        href: "#page_04",
+        url: "/introduction",
         sub: [
             {
                 name: "EXPERIENCE",
