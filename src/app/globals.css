@@ -66,7 +66,7 @@
   --bgColor-opacity: #f8f6fa9a;
   --bgColor-gradient-up: linear-gradient(180deg, rgba(17, 13, 23, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
   --bgColor-gradient-down: linear-gradient(0deg, rgba(17, 13, 23, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-  --bgColor-gradient-slide: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.5) 90%, rgba(255, 255, 255, 1) 100%);
+  --bgColor-gradient-slide: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.5) 90%, rgba(255, 255, 255, 1) 100%);
 
   --borderColor-default: #d8d1e0;
   --borderColor-disabled: #8981981a;
@@ -112,7 +112,7 @@
   --bgColor-opacity: #2721309a;
   --bgColor-gradient-up: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
   --bgColor-gradient-down: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-  --bgColor-gradient-slide: linear-gradient(90deg,rgba(17, 13, 23, 1) 0%, rgba(17, 13, 23, 0.5) 10%, rgba(17, 13, 23, 0) 20%, rgba(17, 13, 23, 0) 80%, rgba(17, 13, 23, 0.5) 90%, rgba(17, 13, 23, 1) 100%);
+  --bgColor-gradient-slide: linear-gradient(90deg, rgba(17, 13, 23, 1) 0%, rgba(17, 13, 23, 0.5) 10%, rgba(17, 13, 23, 0) 20%, rgba(17, 13, 23, 0) 80%, rgba(17, 13, 23, 0.5) 90%, rgba(17, 13, 23, 1) 100%);
 
   --degreeDown: 180deg;
   --degreeUp: 0deg;
@@ -262,6 +262,10 @@ p {
   font-weight: 900;
 }
 
+.lineheight-80 {
+  line-height: 120px;
+}
+
 .font-desc {
   line-height: 30px;
   font-size: 20px;
@@ -286,4 +290,16 @@ p {
 
 .color4 {
   background-color: var(--contribution-violet-bgColor-4);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

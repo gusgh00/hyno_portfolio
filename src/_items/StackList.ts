@@ -1,7 +1,7 @@
 export const stackList = [
     {
         name: "next.js",
-        img: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
     },
     {
         name: "React.js",
@@ -12,8 +12,8 @@ export const stackList = [
         img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
     },
     {
-        name: "Vuetify",
-        img: "https://bestofjs.org/logos/vuetify.svg"
+        name: "ViteJs",
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
     },
     {
         name: "zustand",
