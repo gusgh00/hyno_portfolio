@@ -4,7 +4,7 @@
 
     display: flex;
     align-items: center;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 
     .tech_stack_01_main {
         width: 100%;
