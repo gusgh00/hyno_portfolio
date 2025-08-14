@@ -42,7 +42,7 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.end_section}>
-          <span className={styles.greeting_text}>
+          <span className={styles.greeting_text + " font-title"}>
             안녕하세요,<br /><br />
             <span className="font-accent">프로덕트</span>를<br />
             기획부터 개발까지 진행하며<br />
@@ -50,7 +50,6 @@ export default function Home() {
             <span className="font-primary">유현호</span> 입니다!
           </span>
         </div>
-        <div className={styles.end_section}></div>
       </div>
     </div>
   );

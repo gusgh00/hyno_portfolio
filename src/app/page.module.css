@@ -6,7 +6,8 @@
     align-items: center;
 
     .home_main {
-        width: 1600px;
+        width: 100%;
+        max-width: 1600px;
         height: auto;
         margin: 0 auto;
 
@@ -60,10 +61,10 @@
             display: flex;
             justify-content: cneter;
 
-            .greeting_text {
+            /* .greeting_text {
                 font-size: 40px;
                 font-weight: 700;
-            }
+            } */
         }
     }
 }
