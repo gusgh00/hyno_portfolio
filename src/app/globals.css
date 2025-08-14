@@ -66,6 +66,7 @@
   --bgColor-opacity: #f8f6fa9a;
   --bgColor-gradient-up: linear-gradient(180deg, rgba(17, 13, 23, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
   --bgColor-gradient-down: linear-gradient(0deg, rgba(17, 13, 23, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  --bgColor-gradient-slide: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.5) 90%, rgba(255, 255, 255, 1) 100%);
 
   --borderColor-default: #d8d1e0;
   --borderColor-disabled: #8981981a;
@@ -111,6 +112,7 @@
   --bgColor-opacity: #2721309a;
   --bgColor-gradient-up: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
   --bgColor-gradient-down: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  --bgColor-gradient-slide: linear-gradient(90deg,rgba(17, 13, 23, 1) 0%, rgba(17, 13, 23, 0.5) 10%, rgba(17, 13, 23, 0) 20%, rgba(17, 13, 23, 0) 80%, rgba(17, 13, 23, 0.5) 90%, rgba(17, 13, 23, 1) 100%);
 
   --degreeDown: 180deg;
   --degreeUp: 0deg;
@@ -137,7 +139,7 @@ html,
 body {
   height: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -252,6 +254,18 @@ p {
 
 .font-disabled {
   color: var(--fgColor-disabled);
+}
+
+.font-title {
+  line-height: 40px;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.font-desc {
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .color0 {

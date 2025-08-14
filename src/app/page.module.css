@@ -6,14 +6,15 @@
     align-items: center;
 
     .home_main {
-        width: 1600px;
+        width: 100%;
+        max-width: 1600px;
         height: auto;
         margin: 0 auto;
 
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        gap: 40px;
+        gap: 20px;
 
         .start_section {
             width: 100%;
@@ -25,7 +26,6 @@
             gap: 20px;
 
             .jandi_box {
-                width: 700px;
                 padding: 20px;
 
                 display: flex;
@@ -59,12 +59,12 @@
 
         .end_section {
             display: flex;
-            justify-content: start;
+            justify-content: cneter;
 
-            .greeting_text {
+            /* .greeting_text {
                 font-size: 40px;
                 font-weight: 700;
-            }
+            } */
         }
     }
 }

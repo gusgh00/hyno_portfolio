@@ -42,15 +42,14 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.end_section}>
-          <span className={styles.greeting_text}>
+          <span className={styles.greeting_text + " font-title"}>
             안녕하세요,<br /><br />
             <span className="font-accent">프로덕트</span>를<br />
-            <span className="font-success">기획</span>부터 <span className="font-success">개발</span>까지 진행하며<br />
-            <span className="font-info">다양한 역할</span>을 수행해온<br />
+            기획부터 개발까지 진행하며<br />
+            <span className="font-info">다양한</span> 역할을 수행해온<br />
             <span className="font-primary">유현호</span> 입니다!
           </span>
         </div>
-        <div className={styles.end_section}></div>
       </div>
     </div>
   );
