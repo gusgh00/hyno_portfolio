@@ -13,7 +13,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        gap: 40px;
+        gap: 20px;
 
         .start_section {
             width: 100%;
@@ -25,7 +25,6 @@
             gap: 20px;
 
             .jandi_box {
-                width: 700px;
                 padding: 20px;
 
                 display: flex;
@@ -59,7 +58,7 @@
 
         .end_section {
             display: flex;
-            justify-content: start;
+            justify-content: cneter;
 
             .greeting_text {
                 font-size: 40px;
