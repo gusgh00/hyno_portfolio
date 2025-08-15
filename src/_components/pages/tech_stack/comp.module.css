@@ -1,3 +1,37 @@
+.tech_stack_main {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+
+    .result_section {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        border-radius: 10px;
+        background: var(--bgColor-opacity);
+        border: solid 0.5px var(--borderColor-disabled);
+    }
+
+    .info_section {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        border-radius: 10px;
+        background: var(--bgColor-opacity);
+        border: solid 0.5px var(--borderColor-disabled);
+
+        position: relative;
+    }
+}
+
 .tech_stack_01_main {
     width: 100%;
     max-width: 1600px;
