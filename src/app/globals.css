@@ -303,3 +303,19 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+:root {
+  --codeBox-width: 1600px;
+  --codeBox-margin-left: calc((-1 * (1600px / 2)) + (-1 * (1600px / 4)) - 5px);
+  --codeBox-height: calc(100vh - 200px);
+  --codeBox-margin-top: calc(-1 * ((100vh - 200px) / 2));
+}
+
+@media screen and (max-width: 1600px) {
+  :root {
+    --codeBox-width: calc(100vw - 40px);
+    --codeBox-margin-left: calc((-1 * ((100vw - 40px) / 2)) + (-1 * (100vw / 4)) - 5px);
+    --codeBox-height: calc(100vh - 200px);
+    --codeBox-margin-top: calc(-1 * ((100vh - 200px) / 2));
+  }
+}

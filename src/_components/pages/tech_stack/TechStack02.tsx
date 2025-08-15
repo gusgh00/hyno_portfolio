@@ -2,6 +2,28 @@ import CodeBox from "@components/code_box/CodeBox";
 import styles from "./comp.module.css";
 
 const TechStack02 = () => {
+    const code = `
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    console.log('Hello World')
+    `
     return (
         <>
             <div className={styles.tech_stack_main}>
@@ -12,7 +34,7 @@ const TechStack02 = () => {
                     <div className={styles.result_section}></div>
                 </div>
                 <div className={styles.end_section}>
-                    <CodeBox code="console.log('Hello World')"/>
+                    <CodeBox code={code}/>
                 </div>
             </div>
         </>
