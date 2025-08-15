@@ -65,7 +65,7 @@
         .code_title {
             width: 20px;
             height: 20px;
-            
+
             color: var(--secondary);
         }
 
@@ -103,6 +103,8 @@
 
         transition: height 0.2s, padding 0.2s;
 
+        white-space: nowrap;
+
         .code {
             font-size: 14px;
             font-weight: 500;
@@ -112,8 +114,13 @@
             color: var(--fgColor-default);
 
             .code_index {
+                width: 20px;
+                margin-right: 10px;
+                
+                display: inline-block;
+                text-align: end;
+
                 color: var(--fgColor-disabled);
-                margin-right: 20px;
             }
         }
     }
@@ -125,8 +132,10 @@
     margin: unset;
 
     position: unset;
+
     .top_section {
         border-radius: 10px 10px 0 0;
+
         .start_section {
             .close_icon {
                 background: #7E0508;
@@ -170,6 +179,7 @@
 
     .top_section {
         border-radius: 10px;
+
         .start_section {
             .close_icon {
                 background: #7E0508;
@@ -205,17 +215,19 @@
 }
 
 .code_status_2 {
-    width: calc(100vw - 40px);
-    height: calc(100vh - 200px);
-    margin-top: calc(-1 * ((100vh - 200px) / 2));
-    margin-left: calc((-1 * ((100vw - 40px) / 2)) + (-1 * (100vw / 4)) - 10px);
+    width: var(--codeBox-width);
+    height: var(--codeBox-height);
+    margin-top: var(--codeBox-margin-top);
+    margin-left: var(--codeBox-margin-left);
 
     position: absolute;
     z-index: 300;
     top: 50%;
     left: 50%;
+
     .top_section {
         border-radius: 10px 10px 0 0;
+
         .start_section {
             .close_icon {
                 background: #7E0508;
@@ -241,7 +253,8 @@
     }
 
     .code_section {
-        height: auto;
+        height: calc(100% - 40px);
+        max-height: calc(100% - 40px);
         padding: 10px 20px;
 
         .code {
@@ -262,6 +275,7 @@
     .top_section {
         border-radius: 50%;
         justify-content: center;
+
         .start_section {
             display: none;
         }

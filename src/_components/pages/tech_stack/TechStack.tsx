@@ -10,6 +10,10 @@ const TechStack = () => {
             <Swiper
                 direction={'vertical'}
                 mousewheel={true}
+                simulateTouch={false}
+                // observer={true}
+                // observeParents={true}
+                // observeSlideChildren={true}
                 spaceBetween={30}
                 slidesPerView={1}
                 modules={[Mousewheel]}

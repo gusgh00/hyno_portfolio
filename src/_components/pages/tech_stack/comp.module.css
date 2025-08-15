@@ -4,13 +4,12 @@
     height: auto;
     margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
     gap: 20px;
 
     .start_section {
-        width: 100%;
+        width: calc(50% - 10px);
         height: auto;
         padding: 20px;
 
@@ -30,7 +29,7 @@
     }
 
     .end_section {
-        width: 100%;
+        width: calc(50% - 10px);
         height: auto;
         padding: 20px;
 
