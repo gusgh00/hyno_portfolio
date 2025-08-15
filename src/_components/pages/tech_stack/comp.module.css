@@ -1,70 +1,106 @@
-.tech_stack {
-    width: 100vw;
-    height: 100vh;
+.tech_stack_main {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    scroll-snap-align: center;
+    gap: 20px;
 
-    .tech_stack_01_main {
+    .start_section {
         width: 100%;
-        max-width: 1600px;
         height: auto;
-        margin: 0 auto;
+        padding: 20px;
+
+        border-radius: 10px;
+        background: var(--bgColor-opacity);
+        backdrop-filter: blur(10px);
+        border: solid 0.5px var(--borderColor-disabled);
 
         display: flex;
         flex-direction: column;
-        gap: 80px;
-
-        .description {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            text-align: center;
+        .info_section {
+            width: 100%;
         }
+        .result_section {
+            width: 100%;
+        }
+    }
 
-        .tech_list {
-            width: auto;
+    .end_section {
+        width: 100%;
+        height: auto;
+        padding: 20px;
 
+        border-radius: 10px;
+        background: var(--bgColor-opacity);
+        backdrop-filter: blur(10px);
+        border: solid 0.5px var(--borderColor-disabled);
+
+        position: relative;
+    }
+}
+
+.tech_stack_01_main {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .tech_list {
+        width: auto;
+
+        height: 140px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: baseline;
+
+        position: relative;
+
+        .stack_box {
+            width: 140px;
             height: 140px;
+            padding: 10px;
+            margin: 0 20px;
 
-            white-space: nowrap;
-            overflow: hidden;
-            vertical-align: baseline;
+            vertical-align: middle;
+            display: inline-block;
+            white-space: normal;
+            animation: stackSlide 20s linear infinite;
 
-            position: relative;
-
-            .stack_box {
-                width: 140px;
-                height: 140px;
-                padding: 10px;
-                margin: 0 20px;
-
-                vertical-align: middle;
-                display: inline-block;
-                white-space: normal;
-                animation: stackSlide 20s linear infinite;
-
-                .img {
-                    width: 120px;
-                    height: 120px;
-                }
+            .img {
+                width: 120px;
+                height: 120px;
             }
         }
+    }
 
-        .tech_list::after {
-            content: "";
+    .tech_list::after {
+        content: "";
 
-            width: 100%;
-            height: 140px;
+        width: 100%;
+        height: 140px;
 
-            position: absolute;
-            top: 0;
-            left: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
 
-            background: var(--bgColor-gradient-slide);
-        }
+        background: var(--bgColor-gradient-slide);
     }
 }
 
@@ -72,6 +108,7 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         /*TODO :: -1 * 배열 길이 * (객체  width + 객체 margin-left)*/
         transform: translateX(calc(calc(-22) * calc(140px + 40px)));
