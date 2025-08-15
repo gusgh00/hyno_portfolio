@@ -9,23 +9,34 @@
     align-items: center;
     gap: 20px;
 
-    .result_section {
+    .start_section {
         width: 100%;
         height: auto;
         padding: 20px;
 
         border-radius: 10px;
         background: var(--bgColor-opacity);
+        backdrop-filter: blur(10px);
         border: solid 0.5px var(--borderColor-disabled);
+
+        display: flex;
+        flex-direction: column;
+        .info_section {
+            width: 100%;
+        }
+        .result_section {
+            width: 100%;
+        }
     }
 
-    .info_section {
+    .end_section {
         width: 100%;
         height: auto;
         padding: 20px;
 
         border-radius: 10px;
         background: var(--bgColor-opacity);
+        backdrop-filter: blur(10px);
         border: solid 0.5px var(--borderColor-disabled);
 
         position: relative;
