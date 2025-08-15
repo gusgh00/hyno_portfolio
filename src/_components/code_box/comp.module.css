@@ -18,6 +18,7 @@
 
         background: var(--bgColor-disabled);
         border-bottom: solid 0.5px var(--borderColor-disabled);
+        border-radius: 10px 10px 0 0;
 
         display: flex;
         align-items: center;
@@ -125,6 +126,7 @@
 
     position: unset;
     .top_section {
+        border-radius: 10px 10px 0 0;
         .start_section {
             .close_icon {
                 background: #7E0508;
@@ -170,17 +172,17 @@
         border-radius: 10px;
         .start_section {
             .close_icon {
-                background: var(--fgColor-disabled);
-                color: var(--fgColor-disabled);
+                background: #7E0508;
+                color: #FC5753;
 
-                cursor: default;
+                cursor: pointer;
             }
 
             .min_icon {
-                background: var(--fgColor-disabled);
-                color: var(--fgColor-disabled);
+                background: #985712;
+                color: #FDBC40;
 
-                cursor: default;
+                cursor: pointer;
             }
 
             .max_icon {
@@ -213,6 +215,7 @@
     top: 50%;
     left: 50%;
     .top_section {
+        border-radius: 10px 10px 0 0;
         .start_section {
             .close_icon {
                 background: #7E0508;
@@ -222,10 +225,10 @@
             }
 
             .min_icon {
-                background: #985712;
-                color: #FDBC40;
+                background: var(--fgColor-disabled);
+                color: var(--fgColor-disabled);
 
-                cursor: pointer;
+                cursor: default;
             }
 
             .max_icon {

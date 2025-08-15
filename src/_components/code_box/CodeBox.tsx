@@ -26,7 +26,7 @@ const CodeBox = (props: {
 
     return (
         <>
-            <div className={`${styles.code_box} ${isWindowMin ? styles.code_status_1 : (isWindowMax ? styles.code_status_2 : (isWindowClose ? styles.code_status_3 : styles.code_status_0))}`}>
+            <div className={`${styles.code_box} ${isWindowClose ? styles.code_status_3 : (isWindowMax ? styles.code_status_2 : (isWindowMin ? styles.code_status_1 : styles.code_status_0))}`}>
                 <div className={styles.top_section}
                     onMouseOver={() => setWindowBtn(true)}
                     onMouseOut={() => setWindowBtn(false)}
@@ -36,7 +36,7 @@ const CodeBox = (props: {
                             ?
                             <>
                                 <FaTimesCircle className={styles.close_icon} onClick={() => setWindowClose(true)} />
-                                <FaMinusCircle className={styles.min_icon} onClick={() => setWindowMin(true)} />
+                                <FaMinusCircle className={styles.min_icon} onClick={() => setWindowMin(!isWindowMin)} />
                                 <FaPlusCircle className={styles.max_icon} onClick={() => setWindowMax(!isWindowMax)} />
                             </>
                             :
