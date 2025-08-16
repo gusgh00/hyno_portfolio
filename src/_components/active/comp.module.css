@@ -1,0 +1,76 @@
+.active_button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: solid .5px var(--borderColor-default);
+
+    color: var(--white);
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* &:hover {
+        background: ;
+    } */
+
+    &:disabled {
+        color: var(--fgColor-disabled);
+        background: var(--bgColor-disabled);
+        cursor: default;
+    }
+
+    &.circle {
+        padding: 10px 10px;
+
+        border-radius: 20px;
+    }
+
+    &.round {
+        padding: 10px 20px;
+
+        border-radius: 10px;
+    }
+
+    &.default {
+        color: var(--default);
+    }
+}
+
+.active_tab {
+    display: flex;
+    gap: 10px;
+    .tab {
+        padding: 10px 20px;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: 20px;
+        border: solid .5px var(--borderColor-default);
+        background: var(--bgColor-disabled);
+        color: var(--secondary);
+
+        font-size: 16px;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        &.selected {
+            background: var(--bgColor-default);
+            color: var(--default);
+        }
+
+        &.default {
+            background: var(--bgColor-disabled);
+            color: var(--default);
+        }
+    }
+}

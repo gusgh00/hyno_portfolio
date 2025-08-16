@@ -1,8 +1,7 @@
 "use client"
 import { FaCircle, FaMinusCircle, FaPlusCircle, FaRegCopy, FaTimesCircle } from "react-icons/fa";
 import styles from "./comp.module.css";
-import { useEffect, useState } from "react";
-import { RiResetLeftFill } from "react-icons/ri";
+import { useState } from "react";
 import { FaArrowRotateLeft, FaCode } from "react-icons/fa6";
 
 const CodeBox = (props: {
