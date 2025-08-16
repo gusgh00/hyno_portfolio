@@ -54,6 +54,10 @@
         border: solid 0.5px var(--borderColor-disabled);
 
         position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 

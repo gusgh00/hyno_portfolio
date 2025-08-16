@@ -9,8 +9,8 @@ const ActiveButton = (props: {
 }) => {
     return (
         <>
-            <button type="button" className={`${styles.active_button} ${props.className} ${props.type === "round" ? styles.round : styles.default}`} disabled={props.disabled}
-                onClick={() => props.disabled}
+            <button type="button" className={`${styles.active_button} ${props.className} ${props.type === "circle" ? styles.circle : styles.round} ${props.className === "bg-default" ? styles.default : ""}`} disabled={props.disabled}
+                onClick={() => props.onClick()}
             >
                 {props.children}
             </button>

@@ -267,11 +267,7 @@ p {
 }
 
 .bg-default {
-  background: var(--fgColor-default);
-}
-
-.bg-reverse {
-  background: var(--fgColor-reverse);
+  background: var(--bgColor-default);
 }
 
 .bg-secondary {

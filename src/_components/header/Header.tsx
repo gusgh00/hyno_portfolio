@@ -7,10 +7,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import useSchemeStore from "@store/schemeStore";
 
 const Header = () => {
   const router = useRouter()
-  const [isSchemeType, setSchemeType] = useState<boolean>(false)
+  const {isSchemeType, setSchemeType} = useSchemeStore()
 
   useEffect(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
