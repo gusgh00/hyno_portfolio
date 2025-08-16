@@ -1,0 +1,41 @@
+.active_button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: solid .5px var(--borderColor-default);
+
+    color: var(--white);
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* &:hover {
+        background: ;
+    } */
+
+    &:disabled {
+        color: var(--fgColor-disabled);
+        background: var(--bgColor-disabled);
+        cursor: default;
+    }
+
+    &.round {
+        padding: 10px 10px;
+
+        border-radius: 20px;
+    }
+
+    &.default {
+        padding: 10px 20px;
+
+        border-radius: 10px;
+    }
+}

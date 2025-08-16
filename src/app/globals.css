@@ -50,6 +50,9 @@
   --warning: #bc4c00;
   --error: #d1242f;
 
+  --black: #231f28;
+  --white: #f6f0fc;
+
   --fgColor-primary: #8250df;
   --fgColor-default: #231f28;
   --fgColor-reverse: #f6f0fc;
@@ -95,6 +98,9 @@
   --accent: #4493f8;
   --warning: #db6d28;
   --error: #f85149;
+
+  --black: #231f28;
+  --white: #f6f0fc;
 
   --fgColor-primary: #ab7df8;
   --fgColor-default: #f6f0fc;
@@ -254,6 +260,46 @@ p {
 
 .font-disabled {
   color: var(--fgColor-disabled);
+}
+
+.bg-primary {
+  background: var(--fgColor-primary);
+}
+
+.bg-default {
+  background: var(--fgColor-default);
+}
+
+.bg-reverse {
+  background: var(--fgColor-reverse);
+}
+
+.bg-secondary {
+  background: var(--fgColor-secondary);
+}
+
+.bg-success {
+  background: var(--fgColor-success);
+}
+
+.bg-info {
+  background: var(--fgColor-info);
+}
+
+.bg-accent {
+  background: var(--fgColor-accent);
+}
+
+.bg-warning {
+  background: var(--fgColor-warning);
+}
+
+.bg-error {
+  background: var(--fgColor-error);
+}
+
+.bg-disabled {
+  background: var(--fgColor-disabled);
 }
 
 .font-title {
