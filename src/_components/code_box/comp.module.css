@@ -95,8 +95,7 @@
 
     .code_section {
         width: 100%;
-        height: auto;
-        max-height: 300px;
+        height: 200px;
         padding: 10px 20px;
 
         overflow: auto;
@@ -161,7 +160,7 @@
     }
 
     .code_section {
-        height: auto;
+        height: 200px;
         padding: 10px 20px;
 
         .code {
