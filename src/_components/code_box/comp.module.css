@@ -95,7 +95,7 @@
 
     .code_section {
         width: 100%;
-        height: 200px;
+        height: 400px;
         padding: 10px 20px;
 
         overflow: auto;
@@ -160,7 +160,7 @@
     }
 
     .code_section {
-        height: 200px;
+        height: 400px;
         padding: 10px 20px;
 
         .code {
