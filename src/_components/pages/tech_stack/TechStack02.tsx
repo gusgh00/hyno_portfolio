@@ -10,14 +10,16 @@ import useSchemeStore from "@store/schemeStore";
 const TechStack02 = () => {
     const code = [
 `:root[color-theme='light'] {
-    --primary: #8250df;
-    --default: #231f28;
-    --secondary: #62596e;
-    --success: #1a7f37;
-    --info: #bf3989;
-    --accent: #0969da;
-    --warning: #bc4c00;
-    --error: #d1242f;
+    --fgColor-primary: #8250df;
+    --fgColor-default: #231f28;
+    --fgColor-reverse: #f6f0fc;
+    --fgColor-secondary: #62596e;
+    --fgColor-success: #1a7f37;
+    --fgColor-info: #bf3989;
+    --fgColor-accent: #0969da;
+    --fgColor-warning: #f1a413;
+    --fgColor-error: #d1242f;
+    --fgColor-disabled: #898198;
 
     ...
 
@@ -30,14 +32,16 @@ const TechStack02 = () => {
 }
 
 :root[color-theme='dark'] {
-    --primary: #ab7df8;
-    --default: #f6f0fc;
-    --secondary: #9891a1;
-    --success: #3fb950;
-    --info: #db61a2;
-    --accent: #4493f8;
-    --warning: #db6d28;
-    --error: #f85149;
+    --fgColor-primary: #ab7df8;
+    --fgColor-default: #f6f0fc;
+    --fgColor-reverse: #231f28;
+    --fgColor-secondary: #9891a1;
+    --fgColor-success: #3fb950;
+    --fgColor-info: #db61a2;
+    --fgColor-accent: #4493f8;
+    --fgColor-warning: #f7b131;
+    --fgColor-error: #f85149;
+    --fgColor-disabled: #6b6576;
 
     ...
 
