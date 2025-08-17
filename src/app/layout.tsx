@@ -6,6 +6,9 @@ import Footer from "@components/footer/Footer";
 export const metadata: Metadata = {
   title: "HYNO PORTFOLIO",
   description: "HYNO PORTFOLIO",
+  other: {
+    google: 'notranslate',
+  }
 };
 
 export default function RootLayout({
