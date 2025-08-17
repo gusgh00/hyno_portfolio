@@ -333,6 +333,8 @@ p {
   --codeBox-margin-left: calc((-1 * (1600px / 2)) + (-1 * (1600px / 4)) - 5px);
   --codeBox-height: calc(100vh - 200px);
   --codeBox-margin-top: calc(-1 * ((100vh - 200px) / 2));
+
+  --swiper-pagination-right: 16px;
 }
 
 @media screen and (max-width: 1600px) {
@@ -341,5 +343,15 @@ p {
     --codeBox-margin-left: calc((-1 * ((100vw - 40px) / 2)) + (-1 * (100vw / 4)) - 5px);
     --codeBox-height: calc(100vh - 200px);
     --codeBox-margin-top: calc(-1 * ((100vh - 200px) / 2));
+
+    --swiper-pagination-right: 16px;
   }
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--fgColor-primary) !important;
 }
