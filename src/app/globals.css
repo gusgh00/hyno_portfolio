@@ -41,15 +41,6 @@
 }
 
 :root[color-theme='light'] {
-  --primary: #8250df;
-  --default: #231f28;
-  --secondary: #62596e;
-  --success: #1a7f37;
-  --info: #bf3989;
-  --accent: #0969da;
-  --warning: #bc4c00;
-  --error: #d1242f;
-
   --black: #231f28;
   --white: #f6f0fc;
 
@@ -90,15 +81,6 @@
 }
 
 :root[color-theme='dark'] {
-  --primary: #ab7df8;
-  --default: #f6f0fc;
-  --secondary: #9891a1;
-  --success: #3fb950;
-  --info: #db61a2;
-  --accent: #4493f8;
-  --warning: #db6d28;
-  --error: #f85149;
-
   --black: #231f28;
   --white: #f6f0fc;
 
@@ -188,7 +170,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--secondary);
+  color: var(--fgColor-secondary);
   font-weight: 500;
 }
 
