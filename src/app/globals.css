@@ -41,15 +41,6 @@
 }
 
 :root[color-theme='light'] {
-  --primary: #8250df;
-  --default: #231f28;
-  --secondary: #62596e;
-  --success: #1a7f37;
-  --info: #bf3989;
-  --accent: #0969da;
-  --warning: #bc4c00;
-  --error: #d1242f;
-
   --black: #231f28;
   --white: #f6f0fc;
 
@@ -60,7 +51,7 @@
   --fgColor-success: #1a7f37;
   --fgColor-info: #bf3989;
   --fgColor-accent: #0969da;
-  --fgColor-warning: #bc4c00;
+  --fgColor-warning: #f1a413;
   --fgColor-error: #d1242f;
   --fgColor-disabled: #898198;
 
@@ -90,15 +81,6 @@
 }
 
 :root[color-theme='dark'] {
-  --primary: #ab7df8;
-  --default: #f6f0fc;
-  --secondary: #9891a1;
-  --success: #3fb950;
-  --info: #db61a2;
-  --accent: #4493f8;
-  --warning: #db6d28;
-  --error: #f85149;
-
   --black: #231f28;
   --white: #f6f0fc;
 
@@ -109,7 +91,7 @@
   --fgColor-success: #3fb950;
   --fgColor-info: #db61a2;
   --fgColor-accent: #4493f8;
-  --fgColor-warning: #db6d28;
+  --fgColor-warning: #f7b131;
   --fgColor-error: #f85149;
   --fgColor-disabled: #6b6576;
 
@@ -188,7 +170,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--secondary);
+  color: var(--fgColor-secondary);
   font-weight: 500;
 }
 
