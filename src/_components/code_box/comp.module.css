@@ -109,6 +109,7 @@
             font-weight: 500;
 
             font-family: Consolas, monaco, monospace;
+            white-space: pre;
 
             color: var(--fgColor-default);
 

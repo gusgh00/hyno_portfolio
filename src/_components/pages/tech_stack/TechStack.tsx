@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel } from 'swiper/modules';
 import TechStack01 from "@components/pages/tech_stack/TechStack01";
 import TechStack02 from './TechStack02';
+import TechStack03 from '@components/pages/tech_stack/TechStack03';
 
 const TechStack = () => {
     return (
@@ -20,6 +21,7 @@ const TechStack = () => {
             >
                 <SwiperSlide><TechStack01 /></SwiperSlide>
                 <SwiperSlide><TechStack02 /></SwiperSlide>
+                <SwiperSlide><TechStack03 /></SwiperSlide>
             </Swiper>
         </>
     );
