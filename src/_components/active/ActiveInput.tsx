@@ -10,7 +10,7 @@ const ActiveInput = (props: {
     return (
         <>
             <div className={styles.active_input}>
-                <input type={props.type} disabled={props.disabled} placeholder={props.placeholder} value={props.value} onChange={(event) => props.onChange(event.target.value)} className={styles.input}/>
+                <input type={props.type} disabled={props.disabled} placeholder={props.placeholder} value={props.value} onChange={(event) => props.onChange(event.target.value)} className={styles.input} autoComplete="off"/>
             </div>
         </>
     );

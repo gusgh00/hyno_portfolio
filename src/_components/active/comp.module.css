@@ -217,6 +217,9 @@
         background: var(--bgColor-disabled);
         border: solid 0.5px var(--borderColor-disabled);
 
+        display: flex;
+        align-items: center;
+
         transition: background 0.2s;
 
         .switch {

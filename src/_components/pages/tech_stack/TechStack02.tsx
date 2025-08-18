@@ -2,10 +2,11 @@
 import CodeBox from "@components/code_box/CodeBox";
 import styles from "./comp.module.css";
 import ActiveButton from "@components/active/ActiveButton";
-import { IoIosAlert, IoIosApps, IoIosArrowBack, IoIosArrowForward, IoIosBookmark, IoIosBug, IoIosChatboxes, IoIosCheckmarkCircle, IoIosCloud, IoIosMoon, IoIosSunny } from "react-icons/io";
+import { IoIosAlert, IoIosApps, IoIosArrowBack, IoIosArrowForward, IoIosBookmark, IoIosBug, IoIosChatboxes, IoIosCheckmarkCircle, IoIosCloud } from "react-icons/io";
 import ActiveTab from "@components/active/ActiveTab";
 import { useState } from "react";
 import useSchemeStore from "@store/schemeStore";
+import ActiveSwitch from "@components/active/ActiveSwitch";
 
 const TechStack02 = () => {
     const code = [
@@ -110,7 +111,6 @@ useEffect(() => {
     const [isDummyDefault, setDummyDefault] = useState<string>("Result")
     const [isDummyDefaultClass, setDummyDefaultClass] = useState<string>("font-disabled")
     const [isDummyDisable, setDummyDisable] = useState<boolean>(false)
-    const [isDummyTabIndex, setDummyTabIndex] = useState<number>(0)
     const [isCodeTabIndex, setCodeTabIndex] = useState<number>(0)
 
     const { isSchemeType, setSchemeType } = useSchemeStore()
@@ -221,15 +221,18 @@ useEffect(() => {
                                 Next <IoIosArrowForward />
                             </ActiveButton>
                         </div>
-                        <span className="font-desc">Tab</span>
-                        <div className={styles.step}>
-                            <ActiveTab tabArr={['Dummy 01', 'Dummy 02', 'Dummy 03']} selectedIndex={isDummyTabIndex} onClick={(tabIndex: number) => setDummyTabIndex(tabIndex)} />
-                        </div>
                         <span className="font-desc">Change Scheme (Light or Dark Theme)</span>
                         <div className={styles.step}>
-                            <ActiveButton type="default" className="bg-default" disabled={false} onClick={() => setSchemeType(!isSchemeType)}>
-                                {isSchemeType ? <IoIosMoon /> : <IoIosSunny />} Click Me
-                            </ActiveButton>
+                            <div className={styles.full}>
+                                <div className={styles.half}>
+                                    <ActiveSwitch
+                                        disabled={false}
+                                        title="어두운 모드"
+                                        value={isSchemeType}
+                                        onClick={(status: boolean) => setSchemeType(status)}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
