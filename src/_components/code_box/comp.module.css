@@ -253,7 +253,7 @@
     }
 
     .code_section {
-        height: 680px;
+        height: calc(var(--codeBox-height) - 50px);
         padding: 10px 20px;
 
         .code {
