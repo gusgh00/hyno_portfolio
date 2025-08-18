@@ -3,6 +3,7 @@ import { FaCircle, FaMinusCircle, FaPlusCircle, FaRegCopy, FaTimesCircle } from 
 import styles from "./comp.module.css";
 import { useState } from "react";
 import { FaArrowRotateLeft, FaCode } from "react-icons/fa6";
+import useSwiperStore from "@store/swiperStore";
 
 const CodeBox = (props: {
     code: string
@@ -11,6 +12,8 @@ const CodeBox = (props: {
     const [isWindowMin, setWindowMin] = useState<boolean>(false)
     const [isWindowMax, setWindowMax] = useState<boolean>(false)
     const [isWindowClose, setWindowClose] = useState<boolean>(false)
+
+    const {isSwiper, setIsSwiper} = useSwiperStore()
 
 
     const handleCopyText = async () => {
@@ -52,7 +55,10 @@ const CodeBox = (props: {
                         <FaRegCopy className={styles.copy_icon} onClick={() => handleCopyText()} />
                     </div>
                 </div>
-                <div className={styles.code_section}>
+                <div className={styles.code_section}
+                    onMouseOver={() => setIsSwiper(false)}
+                    onMouseOut={() => setIsSwiper(true)}
+                >
                     {props.code.split('\n').map((item, index) => (
                         <p className={styles.code} key={index}>
                             <span className={styles.code_index}>{index + 1}</span>{item}
