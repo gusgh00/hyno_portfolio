@@ -55,6 +55,8 @@
   --fgColor-error: #d1242f;
   --fgColor-disabled: #898198;
 
+  --bgColor-white: #ffffff;
+  --bgColor-black: #110d17;
   --bgColor-default: #ffffff;
   --bgColor-disabled: #f8f6fa;
   --bgColor-opacity: #f8f6fa9a;
@@ -95,6 +97,8 @@
   --fgColor-error: #f85149;
   --fgColor-disabled: #6b6576;
 
+  --bgColor-white: #ffffff;
+  --bgColor-black: #110d17;
   --bgColor-default: #110d17;
   --bgColor-disabled: #272130;
   --bgColor-opacity: #2721309a;

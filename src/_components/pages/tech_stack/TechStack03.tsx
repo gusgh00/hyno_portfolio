@@ -5,7 +5,6 @@ import ActiveTab from "@components/active/ActiveTab";
 import { useState } from "react";
 import useUserStore from "@store/userStore";
 import ActiveButton from "@components/active/ActiveButton";
-import { IoIosRemoveCircle } from "react-icons/io";
 import { MdCheck, MdEdit, MdOutlineBackspace, MdOutlineRemoveCircle } from "react-icons/md";
 import { UserListInterface } from "../../../_interfaces/UserInterface";
 
@@ -89,7 +88,7 @@ export default useUserStore;`,
     const { isUserList, createUser, updateNameUser, updateAgeUser, removeUser, setEditStatus } = useUserStore()
     return (
         <>
-            <div className={`${styles.tech_stack_main} ${styles.tech_stack_main_02}`}>
+            <div className={`${styles.tech_stack_main} ${styles.tech_stack_03_main}`}>
                 <div className={styles.start_section}>
                     <div className={styles.info_section}>
                         <span className={"font-title"}>상태 관리 (Zustand)</span>
