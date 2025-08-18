@@ -49,14 +49,12 @@
                     background: var(--bgColor-default);
                     border: solid 0.5px var(--borderColor-disabled);
 
-                    position: unset;
-
                     transition: width 0.2s, height 0.2s, margin 0.2s;
 
                     .t_head {
                         width: 100%;
                         height: 40px;
-                        padding: 0 25px 0 10px;
+                        padding: 0 10px;
 
                         background: var(--bgColor-disabled);
                         border-bottom: solid 0.5px var(--borderColor-disabled);
@@ -64,7 +62,7 @@
 
                         display: grid;
                         align-items: center;
-                        grid-template-columns: 1fr 4fr 4fr 3fr;
+                        grid-template-columns: 60px 235px 235px 170px;
                         text-align: center;
 
                         span {
@@ -96,7 +94,7 @@
 
                             display: grid;
                             align-items: center;
-                            grid-template-columns: 1fr 4fr 4fr 3fr;
+                            grid-template-columns: 60px 235px 235px 170px;
                             text-align: center;
 
                             span,
@@ -124,11 +122,12 @@
                                 width: 100%;
                                 padding: 0 5px;
 
-                                display: grid;
-                                grid-template-columns: 1fr 1fr;
-                                align-items: center;
-                                justify-content: center;
+                                display: flex;
                                 gap: 5px;
+
+                                button {
+                                    width: 100%;
+                                }
                             }
 
                             input {
@@ -252,7 +251,7 @@
             .step {
                 .table {
                     .t_head {
-                        grid-template-columns: 1fr 4fr 4fr 3fr;
+                        grid-template-columns: 60px 235px 235px 170px;
                     }
 
                     .t_body {
@@ -262,7 +261,7 @@
 
                         .t_li,
                         .t_input {
-                            grid-template-columns: 1fr 4fr 4fr 3fr;
+                            grid-template-columns: 60px 235px 235px 170px;
                         }
                     }
                 }
