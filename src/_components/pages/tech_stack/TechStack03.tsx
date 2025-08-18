@@ -7,6 +7,7 @@ import useUserStore from "@store/userStore";
 import ActiveButton from "@components/active/ActiveButton";
 import { MdCheck, MdEdit, MdOutlineBackspace, MdOutlineRemoveCircle } from "react-icons/md";
 import { UserListInterface } from "../../../_interfaces/UserInterface";
+import useSwiperStore from "@store/swiperStore";
 
 const TechStack03 = () => {
     const code = [
@@ -86,6 +87,7 @@ export default useUserStore;`,
     const [isCodeTabIndex, setCodeTabIndex] = useState<number>(0)
     const [isAddUser, setAddUser] = useState<UserListInterface>({ name: "", age: 0, editStatus: false })
     const { isUserList, createUser, updateNameUser, updateAgeUser, removeUser, setEditStatus } = useUserStore()
+    const { isSwiper, setIsSwiper } = useSwiperStore()
     return (
         <>
             <div className={`${styles.tech_stack_main} ${styles.tech_stack_03_main}`}>
@@ -103,7 +105,10 @@ export default useUserStore;`,
                                     <span className={styles.age}>나이</span>
                                     <span className={styles.btn}>*</span>
                                 </div>
-                                <div className={styles.t_body}>
+                                <div className={styles.t_body}
+                                    onMouseOver={() => setIsSwiper(false)}
+                                    onMouseOut={() => setIsSwiper(true)}
+                                >
                                     {isUserList.map((item, index) => (
                                         <div className={styles.t_li} key={index}>
                                             {item.editStatus

@@ -177,7 +177,7 @@ module.exports = {
                         <span className="font-desc">Output</span>
                         <div className={styles.step}>
                             <div className={styles.full}>
-                                <span className="font-desc">전체 : <span className="font-secondary">{isResult.result}</span></span>
+                                <span className="font-desc">result : <span className="font-secondary">{isResult.result}</span></span>
                             </div>
                             <div className={styles.full}>
                                 <span className="font-desc">account_number : <span className="font-secondary">{isResult.account_number}</span></span>
