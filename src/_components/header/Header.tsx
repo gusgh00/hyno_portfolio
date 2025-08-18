@@ -3,9 +3,8 @@ import { navigationList } from "@items/NavigationList";
 import LogoDark from "@imgs/logo_dark.png";
 import LogoLight from "@imgs/logo_light.png";
 import styles from "./comp.module.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import useSchemeStore from "@store/schemeStore";
 

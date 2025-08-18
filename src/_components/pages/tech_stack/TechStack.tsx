@@ -8,6 +8,7 @@ import TechStack03 from '@components/pages/tech_stack/TechStack03';
 // import 'swiper/css';
 import 'swiper/css/pagination';
 import ScrollDown from '@components/animation/ScrollDown';
+import TechStack04 from './TechStack04';
 
 const TechStack = () => {
     return (
@@ -27,6 +28,7 @@ const TechStack = () => {
                 <SwiperSlide><TechStack01 /><ScrollDown/></SwiperSlide>
                 <SwiperSlide><TechStack02 /><ScrollDown/></SwiperSlide>
                 <SwiperSlide><TechStack03 /><ScrollDown/></SwiperSlide>
+                <SwiperSlide><TechStack04 /><ScrollDown/></SwiperSlide>
             </Swiper>
         </>
     );
