@@ -9,6 +9,7 @@ import { MdCheck, MdEdit, MdOutlineBackspace, MdOutlineRemoveCircle } from "reac
 import { UserListInterface } from "../../../_interfaces/UserInterface";
 import useSwiperStore from "@store/swiperStore";
 import ActiveInput from "@components/active/ActiveInput";
+import useWidthStore from "@store/widthStore";
 
 const TechStack03 = () => {
     const code = [
@@ -87,16 +88,26 @@ export default useUserStore;`,
     ]
     const [isCodeTabIndex, setCodeTabIndex] = useState<number>(0)
     const [isAddUser, setAddUser] = useState<UserListInterface>({ name: "", age: "", editStatus: false })
+
+    const [isBoxTabIndex, setBoxTabIndex] = useState<number>(0)
+    const { isWidth } = useWidthStore()
+
     const { isUserList, createUser, updateNameUser, updateAgeUser, removeUser, setEditStatus } = useUserStore()
     const { setIsSwiper } = useSwiperStore()
     return (
         <>
             <div className={`${styles.tech_stack_main} ${styles.tech_stack_03_main}`}>
-                <div className={styles.start_section}>
+                <div className={styles.mobile_view}>
+                    <ActiveTab tabArr={['result', 'code']} selectedIndex={isBoxTabIndex} onClick={(tabIndex: number) => setBoxTabIndex(tabIndex)} />
+                </div>
+                <div className={`${styles.start_section} ${isWidth <= 1600 ? (isBoxTabIndex === 0 ? styles.display_block : styles.display_none) : ""}`}>
                     <div className={styles.info_section}>
                         <span className={"font-title"}>상태 관리 (Zustand)</span>
                     </div>
-                    <div className={styles.result_section}>
+                    <div className={styles.result_section}
+                        onMouseOver={() => setIsSwiper(false)}
+                        onMouseOut={() => setIsSwiper(true)}
+                    >
                         <span className="font-desc">Result</span>
                         <div className={styles.step}>
                             <div className={styles.table}>
@@ -200,7 +211,7 @@ export default useUserStore;`,
                         </div>
                     </div>
                 </div>
-                <div className={styles.end_section}>
+                <div className={`${styles.end_section} ${isWidth <= 1600 ? (isBoxTabIndex === 1 ? styles.display_block : styles.display_none) : ""}`}>
                     <ActiveTab tabArr={['TypeScript', 'DOM']} selectedIndex={isCodeTabIndex} onClick={(tabIndex: number) => setCodeTabIndex(tabIndex)} />
                     <CodeBox code={code[isCodeTabIndex]} />
                 </div>

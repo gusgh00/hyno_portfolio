@@ -9,6 +9,8 @@ import ActiveButton from "@components/active/ActiveButton";
 import { MdCheck } from "react-icons/md";
 import ActiveSwitch from "@components/active/ActiveSwitch";
 import { AccountInfoInterface, AccountResultInterface, BankListInterface } from "../../../_interfaces/AccountInterface";
+import useWidthStore from "@store/widthStore";
+import useSwiperStore from "@store/swiperStore";
 const { bankList, covertAccountNumber } = require("account-number-convert");
 
 const TechStack04 = () => {
@@ -104,6 +106,11 @@ module.exports = {
     const [isAccount, setAccount] = useState<AccountInfoInterface>({ account_number: "", bank_code: "", owner: "", masking: false })
     const [isResult, setResult] = useState<AccountResultInterface>({ account_number: "결과가 없습니다.", bank_name: "결과가 없습니다.", result: "결과가 없습니다." })
 
+    const [isBoxTabIndex, setBoxTabIndex] = useState<number>(0)
+    const { isWidth } = useWidthStore()
+
+    const { setIsSwiper } = useSwiperStore()
+
     useEffect(() => {
         if (isSelected !== null) {
             const bank_code = bankList.find((item: BankListInterface, index: number) => index === isSelected).account_code
@@ -118,11 +125,17 @@ module.exports = {
     return (
         <>
             <div className={`${styles.tech_stack_main} ${styles.tech_stack_04_main}`}>
-                <div className={styles.start_section}>
+                <div className={styles.mobile_view}>
+                    <ActiveTab tabArr={['result', 'code']} selectedIndex={isBoxTabIndex} onClick={(tabIndex: number) => setBoxTabIndex(tabIndex)} />
+                </div>
+                <div className={`${styles.start_section} ${isWidth <= 1600 ? (isBoxTabIndex === 0 ? styles.display_block : styles.display_none) : ""}`}>
                     <div className={styles.info_section}>
                         <span className={"font-title"}>npm 라이브러리</span>
                     </div>
-                    <div className={styles.result_section}>
+                    <div className={styles.result_section}
+                        onMouseOver={() => setIsSwiper(false)}
+                        onMouseOut={() => setIsSwiper(true)}
+                    >
                         <span className="font-desc">Input <span className="font-accent">* 저장되지 않는 입력폼입니다.</span></span>
                         <div className={styles.step}>
                             <div className={styles.full}>
@@ -188,7 +201,7 @@ module.exports = {
                         </div>
                     </div>
                 </div>
-                <div className={styles.end_section}>
+                <div className={`${styles.end_section} ${isWidth <= 1600 ? (isBoxTabIndex === 1 ? styles.display_block : styles.display_none) : ""}`}>
                     <ActiveTab tabArr={['npm']} selectedIndex={isCodeTabIndex} onClick={(tabIndex: number) => setCodeTabIndex(tabIndex)} />
                     <CodeBox code={code[isCodeTabIndex]} />
                 </div>

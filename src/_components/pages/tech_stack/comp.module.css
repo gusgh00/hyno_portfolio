@@ -28,10 +28,13 @@
 
         .result_section {
             width: 100%;
+            height: auto;
 
             display: flex;
             flex-direction: column;
             gap: 10px;
+
+            overflow-y: auto;
 
             .step {
                 gap: 10px;
@@ -170,6 +173,10 @@
         flex-direction: column;
         gap: 10px;
     }
+
+    .mobile_view {
+        display: none;
+    }
 }
 
 .tech_stack_01_main {
@@ -280,5 +287,98 @@
     100% {
         /*TODO :: -1 * 배열 길이 * (객체  width + 객체 margin-left)*/
         transform: translateX(calc(calc(-22) * calc(140px + 40px)));
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .tech_stack_main {
+        width: 100%;
+        max-width: 1600px;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .start_section {
+            width: 100%;
+            height: calc(100vh - 220px);
+
+            &.display_none {
+                display: none;
+            }
+
+            .result_section {
+                .step {
+                    .full {
+                        width: 100%;
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .half {
+                            width: 100%;
+
+                            display: flex;
+                            gap: 10px;
+
+                            .quarter {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .end_section {
+            width: 100%;
+            height: calc(100vh - 220px);
+
+            &.display_none {
+                display: none;
+            }
+        }
+
+        .mobile_view {
+            display: flex;
+        }
+    }
+
+    .tech_stack_03_main {
+        .start_section {
+            .result_section {
+                .step {
+                    .table {
+                        .t_head {
+                            grid-template-columns: 1fr 2fr 2fr 2fr;
+                        }
+
+                        .t_body {
+                            height: 300px;
+
+                            overflow-y: scroll;
+
+                            .t_li,
+                            .t_input {
+                                grid-template-columns: 1fr 2fr 2fr 2fr;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .tech_stack_01_main {
+        .tech_list {
+            display: none;
+        }
     }
 }

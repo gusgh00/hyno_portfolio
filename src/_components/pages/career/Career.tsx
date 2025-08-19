@@ -8,13 +8,16 @@ import Career04 from '@components/pages/career/Career04';
 import Career00 from '@components/pages/career/Career00';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import useWidthStore from '@store/widthStore';
 
 const Career = () => {
+    const { isWidth } = useWidthStore()
+
     return (
         <>
             <Swiper
                 spaceBetween={30}
-                slidesPerView={3}
+                slidesPerView={isWidth > 1600 ? 3 : (isWidth > 1000 ? 2 : 1)}
                 pagination={{
                     clickable: true,
                 }}
