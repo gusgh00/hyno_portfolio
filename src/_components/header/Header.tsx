@@ -8,11 +8,13 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import useSchemeStore from "@store/schemeStore";
 import ActiveSelect from "@components/active/ActiveSelect";
+import useWidthStore from "@store/widthStore";
 
 const Header = () => {
   const router = useRouter()
   const pathname = usePathname()
   const { isSchemeType, setSchemeType } = useSchemeStore()
+  const { setIsWidth } = useWidthStore()
   const [isMenuSelect, setMenuSelect] = useState<number>(0)
 
   useEffect(() => {
@@ -40,6 +42,20 @@ const Header = () => {
     const menuIndex = navigationList.findIndex((item, index) => item.url === pathname)
     setMenuSelect(menuIndex)
   }, [pathname])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setIsWidth(window.innerWidth);
+      };
+      handleResize();
+
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
   return (
     <>
       <header className={styles.header}>

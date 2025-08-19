@@ -7,6 +7,8 @@ import ActiveTab from "@components/active/ActiveTab";
 import { useState } from "react";
 import useSchemeStore from "@store/schemeStore";
 import ActiveSwitch from "@components/active/ActiveSwitch";
+import useSwiperStore from "@store/swiperStore";
+import useWidthStore from "@store/widthStore";
 
 const TechStack02 = () => {
     const code = [
@@ -113,15 +115,25 @@ useEffect(() => {
     const [isDummyDisable, setDummyDisable] = useState<boolean>(false)
     const [isCodeTabIndex, setCodeTabIndex] = useState<number>(0)
 
+    const [isBoxTabIndex, setBoxTabIndex] = useState<number>(0)
+    const { isWidth } = useWidthStore()
+
     const { isSchemeType, setSchemeType } = useSchemeStore()
+    const { setIsSwiper } = useSwiperStore()
     return (
         <>
             <div className={`${styles.tech_stack_main} ${styles.tech_stack_main_02}`}>
-                <div className={styles.start_section}>
+                <div className={styles.mobile_view}>
+                    <ActiveTab tabArr={['result', 'code']} selectedIndex={isBoxTabIndex} onClick={(tabIndex: number) => setBoxTabIndex(tabIndex)} />
+                </div>
+                <div className={`${styles.start_section} ${isWidth <= 1600 ? (isBoxTabIndex === 0 ? styles.display_block : styles.display_none) : ""}`}>
                     <div className={styles.info_section}>
                         <span className={"font-title"}>CSS 디자인 토큰 & 버튼 & 다크 Theme</span>
                     </div>
-                    <div className={styles.result_section}>
+                    <div className={styles.result_section}
+                        onMouseOver={() => setIsSwiper(false)}
+                        onMouseOut={() => setIsSwiper(true)}
+                    >
                         <span className="font-desc">Default: <span className={isDummyDefaultClass}>{isDummyDefault}</span></span>
                         <div className={styles.step}>
                             <ActiveButton type="round" className="bg-primary" disabled={false} onClick={() => {
@@ -238,7 +250,7 @@ useEffect(() => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.end_section}>
+                <div className={`${styles.end_section} ${isWidth <= 1600 ? (isBoxTabIndex === 1 ? styles.display_block : styles.display_none) : ""}`}>
                     <ActiveTab tabArr={['CSS', 'TypeScript']} selectedIndex={isCodeTabIndex} onClick={(tabIndex: number) => setCodeTabIndex(tabIndex)} />
                     <CodeBox code={code[isCodeTabIndex]} />
                 </div>
