@@ -7,7 +7,7 @@ interface StateType {
   setUserList: (isUserList: UserListInterface[]) => void;
   createUser: (isUser: UserListInterface) => void;
   updateNameUser: (index:number, value: string) => void;
-  updateAgeUser: (index:number, value: number) => void;
+  updateAgeUser: (index:number, value: string) => void;
   removeUser: (index:number) => void;
   setEditStatus: (index:number) => void;
 }
@@ -20,7 +20,7 @@ const useUserStore = create<StateType>((set) => ({
   updateNameUser: (index: number, value: string) => set((state) => ({
     isUserList: state.isUserList.map((item, idx) => idx === index ? {...item, name: value} : item)
   })),
-  updateAgeUser: (index: number, value: number) => set((state) => ({
+  updateAgeUser: (index: number, value: string) => set((state) => ({
     isUserList: state.isUserList.map((item, idx) => idx === index ? {...item, age: value} : item)
   })),
   removeUser: (index: number) => set((state) => ({

@@ -14,7 +14,7 @@ const ActiveSelect = (props: {
     const ref = useRef<HTMLDivElement | null>(null);
     const [isOnSelectBox, setOnSelectBox] = useState<boolean>(false)
 
-    const { isSwiper, setIsSwiper } = useSwiperStore()
+    const { setIsSwiper } = useSwiperStore()
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

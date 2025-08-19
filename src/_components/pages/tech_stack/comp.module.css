@@ -1,7 +1,7 @@
 .tech_stack_main {
     width: 100%;
     max-width: 1600px;
-    height: auto;
+    height: 100vh;
     margin: 0 auto;
 
     display: flex;
@@ -65,7 +65,7 @@
                         grid-template-columns: 60px 235px 235px 170px;
                         text-align: center;
 
-                        span {
+                        .area {
                             color: var(--fgColor-default);
                             font-size: 16px;
                             font-weight: 500;
@@ -97,8 +97,7 @@
                             grid-template-columns: 60px 235px 235px 170px;
                             text-align: center;
 
-                            span,
-                            div {
+                            .area {
                                 height: 50px;
                                 line-height: 50px;
                                 padding: 4px 0;
@@ -120,7 +119,8 @@
 
                             .btn {
                                 width: 100%;
-                                padding: 0 5px;
+                                height: 50px;
+                                padding: 0.5px 2px;
 
                                 display: flex;
                                 gap: 5px;
@@ -128,18 +128,6 @@
                                 button {
                                     width: 100%;
                                 }
-                            }
-
-                            input {
-                                width: 90%;
-                                height: 100%;
-
-                                text-align: center;
-                                font-size: 18px;
-
-                                border-radius: 10px;
-                                background: var(--bgColor-disabled);
-                                border: solid 0.5px var(--borderColor-disabled);
                             }
                         }
                     }
@@ -187,10 +175,11 @@
 .tech_stack_01_main {
     width: 100%;
     max-width: 1600px;
-    height: auto;
+    height: 100vh;
     margin: 0 auto;
 
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 80px;
 

@@ -13,7 +13,7 @@ const CodeBox = (props: {
     const [isWindowMax, setWindowMax] = useState<boolean>(false)
     const [isWindowClose, setWindowClose] = useState<boolean>(false)
 
-    const {isSwiper, setIsSwiper} = useSwiperStore()
+    const { setIsSwiper } = useSwiperStore()
 
 
     const handleCopyText = async () => {
