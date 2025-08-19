@@ -59,6 +59,7 @@
         font-size: 16px;
         font-weight: 700;
 
+        transition: color 0.2s, border 0.2s;
         cursor: pointer;
 
         &.selected {
@@ -69,6 +70,11 @@
         &.default {
             background: var(--bgColor-disabled);
             color: var(--fgColor-default);
+        }
+
+        &:hover {
+            color: var(--fgColor-accent);
+            border: solid .5px var(--fgColor-accent);
         }
     }
 }
@@ -93,12 +99,15 @@
         text-align: start;
 
         cursor: pointer;
+        transition: border 0.2s;
 
         .selected {
             width: calc(100% - 40px);
             color: var(--fgColor-default);
             font-size: 18px;
             font-weight: 500;
+
+            transition: color 0.2s;
         }
 
         .placeholder {
@@ -114,6 +123,14 @@
 
             &.select_on {
                 transform: rotate(180deg);
+            }
+        }
+
+        &:hover {
+            border: solid .5px var(--fgColor-accent);
+
+            .placeholder {
+                color: var(--fgColor-accent);
             }
         }
     }
@@ -162,6 +179,8 @@
 
     &:has(.select_list_on) {
         .select_box {
+            border: solid .5px var(--fgColor-accent);
+
             .placeholder {
                 color: var(--fgColor-accent);
             }
@@ -184,6 +203,7 @@
     text-align: start;
 
     cursor: pointer;
+    transition: border 0.2s;
 
     .input {
         width: 100%;
@@ -198,19 +218,29 @@
 
     .input::placeholder {
         color: var(--fgColor-disabled);
-    }
 
-    .input:focus {
-        color: var(--fgColor-accent);
+        transition: color 0.2s;
     }
 
     .input:focus::placeholder {
         color: var(--fgColor-accent);
     }
 
+    &:has(.input:focus) {
+        border: solid .5px var(--fgColor-accent);
+    }
+
     input[type="number"]::-webkit-inner-spin-button,
     input[type="number"]::-webkit-outer-spin-button {
         display: none;
+    }
+
+    &:hover {
+        border: solid .5px var(--fgColor-accent);
+
+        .input::placeholder {
+            color: var(--fgColor-accent);
+        }
     }
 }
 
@@ -270,6 +300,37 @@
             .switch {
                 transform: translateX(0);
             }
+        }
+    }
+}
+
+.active_chip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .chip {
+        padding: 10px 20px;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: 20px;
+        border: solid .5px var(--borderColor-default);
+        background: var(--bgColor-disabled);
+        color: var(--fgColor-secondary);
+
+        font-size: 16px;
+        font-weight: 700;
+
+        transition: color 0.2s, border 0.2s;
+        cursor: default;
+
+        &:hover {
+            color: var(--fgColor-accent);
+            border: solid .5px var(--fgColor-accent);
         }
     }
 }

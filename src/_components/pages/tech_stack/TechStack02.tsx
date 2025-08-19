@@ -10,7 +10,7 @@ import ActiveSwitch from "@components/active/ActiveSwitch";
 
 const TechStack02 = () => {
     const code = [
-`:root[color-theme='light'] {
+        `:root[color-theme='light'] {
     --fgColor-primary: #8250df;
     --fgColor-default: #231f28;
     --fgColor-reverse: #f6f0fc;
@@ -75,7 +75,7 @@ body {
 }
 
 ...`,
-`//scheme state
+        `//scheme state
 import { create } from 'zustand';
 
 interface StateType {
@@ -225,12 +225,14 @@ useEffect(() => {
                         <div className={styles.step}>
                             <div className={styles.full}>
                                 <div className={styles.half}>
-                                    <ActiveSwitch
-                                        disabled={false}
-                                        title="어두운 모드"
-                                        value={isSchemeType}
-                                        onClick={(status: boolean) => setSchemeType(status)}
-                                    />
+                                    <div className={styles.quarter}>
+                                        <ActiveSwitch
+                                            disabled={false}
+                                            title="어두운모드"
+                                            value={isSchemeType}
+                                            onClick={(status: boolean) => setSchemeType(status)}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
