@@ -1,5 +1,5 @@
 export interface UserListInterface {
     name: string,
-    age: number,
+    age: string,
     editStatus: boolean,
 }

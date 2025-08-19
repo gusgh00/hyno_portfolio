@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 10px;
 
-    border: solid .5px var(--borderColor-default);
+    border: solid 0.5px var(--borderColor-disabled);
 
     color: var(--white);
 
@@ -159,6 +159,14 @@
             visibility: visible;
         }
     }
+
+    &:has(.select_list_on) {
+        .select_box {
+            .placeholder {
+                color: var(--fgColor-accent);
+            }
+        }
+    }
 }
 
 .active_input {
@@ -190,6 +198,19 @@
 
     .input::placeholder {
         color: var(--fgColor-disabled);
+    }
+
+    .input:focus {
+        color: var(--fgColor-accent);
+    }
+
+    .input:focus::placeholder {
+        color: var(--fgColor-accent);
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        display: none;
     }
 }
 

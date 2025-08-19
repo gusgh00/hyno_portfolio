@@ -65,7 +65,7 @@
                         grid-template-columns: 60px 235px 235px 170px;
                         text-align: center;
 
-                        span {
+                        .area {
                             color: var(--fgColor-default);
                             font-size: 16px;
                             font-weight: 500;
@@ -97,8 +97,7 @@
                             grid-template-columns: 60px 235px 235px 170px;
                             text-align: center;
 
-                            span,
-                            div {
+                            .area {
                                 height: 50px;
                                 line-height: 50px;
                                 padding: 4px 0;
@@ -130,7 +129,7 @@
                                 }
                             }
 
-                            input {
+                            /* input {
                                 width: 90%;
                                 height: 100%;
 
@@ -140,7 +139,7 @@
                                 border-radius: 10px;
                                 background: var(--bgColor-disabled);
                                 border: solid 0.5px var(--borderColor-disabled);
-                            }
+                            } */
                         }
                     }
                 }

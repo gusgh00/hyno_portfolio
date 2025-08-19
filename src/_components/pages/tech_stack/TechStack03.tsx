@@ -8,6 +8,7 @@ import ActiveButton from "@components/active/ActiveButton";
 import { MdCheck, MdEdit, MdOutlineBackspace, MdOutlineRemoveCircle } from "react-icons/md";
 import { UserListInterface } from "../../../_interfaces/UserInterface";
 import useSwiperStore from "@store/swiperStore";
+import ActiveInput from "@components/active/ActiveInput";
 
 const TechStack03 = () => {
     const code = [
@@ -85,9 +86,9 @@ export default useUserStore;`,
 }`
     ]
     const [isCodeTabIndex, setCodeTabIndex] = useState<number>(0)
-    const [isAddUser, setAddUser] = useState<UserListInterface>({ name: "", age: 0, editStatus: false })
+    const [isAddUser, setAddUser] = useState<UserListInterface>({ name: "", age: "", editStatus: false })
     const { isUserList, createUser, updateNameUser, updateAgeUser, removeUser, setEditStatus } = useUserStore()
-    const { isSwiper, setIsSwiper } = useSwiperStore()
+    const { setIsSwiper } = useSwiperStore()
     return (
         <>
             <div className={`${styles.tech_stack_main} ${styles.tech_stack_03_main}`}>
@@ -114,20 +115,32 @@ export default useUserStore;`,
                                             {item.editStatus
                                                 ?
                                                 <>
-                                                    <span className={styles.sort}>{index + 1}</span>
-                                                    <span className={styles.name}>
-                                                        <input type="text" name="name" placeholder="입력해주세요." value={item.name} onChange={(event) => updateNameUser(index, event.target.value)} />
+                                                    <span className={styles.area}>{index + 1}</span>
+                                                    <span className={styles.area}>
+                                                        <ActiveInput
+                                                            type="text"
+                                                            disabled={false}
+                                                            value={item.name}
+                                                            placeholder="이름 입력"
+                                                            onChange={(text: string) => updateNameUser(index, text)}
+                                                        />
                                                     </span>
-                                                    <span className={styles.age}>
-                                                        <input type="number" name="age" placeholder="입력해주세요." value={item.age} onChange={(event) => updateAgeUser(index, Number(event.target.value))} />
+                                                    <span className={styles.area}>
+                                                        <ActiveInput
+                                                            type="number"
+                                                            disabled={false}
+                                                            value={item.age}
+                                                            placeholder="나이 입력"
+                                                            onChange={(text: string) => updateAgeUser(index, text)}
+                                                        />
                                                     </span>
                                                     <div className={styles.btn}>
-                                                        <ActiveButton type="round" disabled={!(item.name !== "" && item.age !== 0)} className="bg-success" onClick={() => setEditStatus(index)}>
+                                                        <ActiveButton type="round" disabled={!(item.name !== "" && item.age !== "")} className="bg-success" onClick={() => setEditStatus(index)}>
                                                             <MdCheck />
                                                         </ActiveButton>
                                                         <ActiveButton type="round" disabled={false} className="bg-secondary" onClick={() => {
                                                             updateNameUser(index, "")
-                                                            updateAgeUser(index, 0)
+                                                            updateAgeUser(index, "")
                                                         }}>
                                                             <MdOutlineBackspace />
                                                         </ActiveButton>
@@ -135,9 +148,9 @@ export default useUserStore;`,
                                                 </>
                                                 :
                                                 <>
-                                                    <span className={styles.sort}>{index + 1}</span>
-                                                    <span className={styles.name}>{item.name}</span>
-                                                    <span className={styles.age}>{item.age}</span>
+                                                    <span className={styles.area}>{index + 1}</span>
+                                                    <span className={styles.area}>{item.name}</span>
+                                                    <span className={styles.area}>{item.age}</span>
                                                     <div className={styles.btn}>
                                                         <ActiveButton type="round" disabled={false} className="bg-accent" onClick={() => setEditStatus(index)}>
                                                             <MdEdit />
@@ -151,21 +164,33 @@ export default useUserStore;`,
                                         </div>
                                     ))}
                                     <div className={styles.t_input}>
-                                        <span className={styles.sort}>#</span>
-                                        <div className={styles.name}>
-                                            <input type="text" name="name" placeholder="입력해주세요." value={isAddUser.name} onChange={(event) => setAddUser({ ...isAddUser, name: event.target.value })} />
+                                        <span className={styles.area}>#</span>
+                                        <div className={styles.area}>
+                                            <ActiveInput
+                                                type="text"
+                                                disabled={false}
+                                                value={isAddUser.name}
+                                                placeholder="이름 입력"
+                                                onChange={(text: string) => setAddUser({ ...isAddUser, name: text })}
+                                            />
                                         </div>
-                                        <div className={styles.age}>
-                                            <input type="number" name="age" placeholder="입력해주세요." value={isAddUser.age} onChange={(event) => setAddUser({ ...isAddUser, age: Number(event.target.value) })} />
+                                        <div className={styles.area}>
+                                            <ActiveInput
+                                                type="number"
+                                                disabled={false}
+                                                value={isAddUser.age}
+                                                placeholder="나이 입력"
+                                                onChange={(text: string) => setAddUser({ ...isAddUser, age: text })}
+                                            />
                                         </div>
                                         <div className={styles.btn}>
-                                            <ActiveButton type="round" disabled={!(isAddUser.name !== "" && isAddUser.age !== 0)} className="bg-success" onClick={() => {
+                                            <ActiveButton type="round" disabled={!(isAddUser.name !== "" && isAddUser.age !== "")} className="bg-success" onClick={() => {
                                                 createUser(isAddUser)
-                                                setAddUser({ name: "", age: 0, editStatus: false })
+                                                setAddUser({ name: "", age: "", editStatus: false })
                                             }}>
                                                 <MdCheck />
                                             </ActiveButton>
-                                            <ActiveButton type="round" disabled={false} className="bg-secondary" onClick={() => setAddUser({ name: "", age: 0, editStatus: false })}>
+                                            <ActiveButton type="round" disabled={false} className="bg-secondary" onClick={() => setAddUser({ name: "", age: "", editStatus: false })}>
                                                 <MdOutlineBackspace />
                                             </ActiveButton>
                                         </div>
