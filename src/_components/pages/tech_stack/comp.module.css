@@ -119,7 +119,8 @@
 
                             .btn {
                                 width: 100%;
-                                padding: 0 5px;
+                                height: 50px;
+                                padding: 0.5px 2px;
 
                                 display: flex;
                                 gap: 5px;
@@ -128,18 +129,6 @@
                                     width: 100%;
                                 }
                             }
-
-                            /* input {
-                                width: 90%;
-                                height: 100%;
-
-                                text-align: center;
-                                font-size: 18px;
-
-                                border-radius: 10px;
-                                background: var(--bgColor-disabled);
-                                border: solid 0.5px var(--borderColor-disabled);
-                            } */
                         }
                     }
                 }
