@@ -90,7 +90,7 @@
         justify-content: center;
         gap: 20px;
 
-        text-align: center;
+        text-align: start;
 
         cursor: pointer;
 
@@ -132,7 +132,7 @@
         display: flex;
         flex-direction: column;
 
-        text-align: center;
+        text-align: start;
         overflow-y: auto;
 
         visibility: hidden;
@@ -140,6 +140,7 @@
         .select {
             line-height: 40px;
             width: 100%;
+            padding: 0 20px;
 
             background: transparent;
             color: var(--fgColor-default);
