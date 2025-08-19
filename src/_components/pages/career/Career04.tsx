@@ -1,5 +1,6 @@
 import styles from "./comp.module.css";
 import Link from "next/link";
+import { GoDotFill } from "react-icons/go";
 import { LuExternalLink } from "react-icons/lu";
 
 const Career04 = () => {
@@ -21,8 +22,8 @@ const Career04 = () => {
                         <span className={styles.desc}>Vue.js, Vite, Vuetify, Typescript, PHP Laravel</span>
                         <span className={styles.name}>주요업무 및 상세역할</span>
                         <span className={styles.desc}>
-                            - Pinia 상태 관리 사용<br/>
-                            - CRUD 성능 개선
+                            <GoDotFill className={styles.dot} /> Pinia 상태 관리 사용<br/>
+                            <GoDotFill className={styles.dot} /> CRUD 성능 개선
                         </span>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import styles from "./comp.module.css";
 import Link from "next/link";
+import { GoDotFill } from "react-icons/go";
 import { LuExternalLink } from "react-icons/lu";
 
 const Career00 = () => {
@@ -23,10 +24,10 @@ const Career00 = () => {
                         <span className={styles.desc}>웹서비스 개발 및 유지보수</span>
                         <span className={styles.name}>업무내용</span>
                         <span className={styles.desc}>
-                            - 바이비츠 웹서비스 유지보수<br />
-                            - 내부 백오피스 (어드민 웹서비스) 개발 및 유지보수<br />
-                            - 음원 에셋 판매 사이트 업로드 매크로 개발 및 유지보수<br />
-                            - 유통사, 권리자 정산 시스템 개발 및 유지보수
+                            <GoDotFill className={styles.dot} /> 바이비츠 웹서비스 유지보수<br />
+                            <GoDotFill className={styles.dot} /> 내부 백오피스 (어드민 웹서비스) 개발 및 유지보수<br />
+                            <GoDotFill className={styles.dot} /> 음원 에셋 판매 사이트 업로드 매크로 개발 및 유지보수<br />
+                            <GoDotFill className={styles.dot} /> 유통사, 권리자 정산 시스템 개발 및 유지보수
                         </span>
                     </div>
                 </div>

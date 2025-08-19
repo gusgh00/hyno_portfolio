@@ -1,5 +1,6 @@
 import styles from "./comp.module.css";
 import Link from "next/link";
+import { GoDotFill } from "react-icons/go";
 import { LuExternalLink } from "react-icons/lu";
 
 const Career03 = () => {
@@ -21,10 +22,10 @@ const Career03 = () => {
                         <span className={styles.desc}>Vue.js, Vite, Vuetify, Typescript, PHP Laravel</span>
                         <span className={styles.name}>주요업무 및 상세역할</span>
                         <span className={styles.desc}>
-                            - Pinia 상태 관리 적극 사용<br/>
-                            - 대용량 엑셀 데이터 json 변환, 데이터 테이블 엑셀 형태로 변환(xlsx, sheetjs)<br />
-                            - 정산 데이터 동적 차트 그래프 변화 (google-chartjs)<br />
-                            - 세금, 환율 계산 함수<br />
+                            <GoDotFill className={styles.dot} /> Pinia 상태 관리 적극 사용<br/>
+                            <GoDotFill className={styles.dot} /> 대용량 엑셀 데이터 json 변환, 데이터 테이블 엑셀 형태로 변환(xlsx, sheetjs)<br />
+                            <GoDotFill className={styles.dot} /> 정산 데이터 동적 차트 그래프 변화 (google-chartjs)<br />
+                            <GoDotFill className={styles.dot} /> 세금, 환율 계산 함수<br />
                         </span>
                     </div>
                 </div>

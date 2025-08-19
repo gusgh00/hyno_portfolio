@@ -1,5 +1,6 @@
 import styles from "./comp.module.css";
 import Link from "next/link";
+import { GoDotFill } from "react-icons/go";
 import { LuExternalLink } from "react-icons/lu";
 
 const Career01 = () => {
@@ -21,12 +22,12 @@ const Career01 = () => {
                         <span className={styles.desc}>Next.js, Typescript, PHP Laravel</span>
                         <span className={styles.name}>주요업무 및 상세역할</span>
                         <span className={styles.desc}>
-                            - Recoil 상태 관리 적극 사용<br />
-                            - 음원 & 앨범, 구독 시스템, 멘토링 결제 시스템 (toss-payments)<br />
-                            - 메인페이지, 헤더 퍼블리싱 및 애니메이션 (LottieFiles)<br />
-                            - internationalization 언어 지원 서비스 (i18next)<br />
-                            - SEO 최적화 (Light House)<br />
-                            - 기타 핫픽스 및 백오피스 운영 관리<br />
+                            <GoDotFill className={styles.dot} /> Recoil 상태 관리 적극 사용<br />
+                            <GoDotFill className={styles.dot} /> 음원 & 앨범, 구독 시스템, 멘토링 결제 시스템 (toss-payments)<br />
+                            <GoDotFill className={styles.dot} /> 메인페이지, 헤더 퍼블리싱 및 애니메이션 (LottieFiles)<br />
+                            <GoDotFill className={styles.dot} /> internationalization 언어 지원 서비스 (i18next)<br />
+                            <GoDotFill className={styles.dot} /> SEO 최적화 (Light House)<br />
+                            <GoDotFill className={styles.dot} /> 기타 핫픽스 및 백오피스 운영 관리<br />
                         </span>
                     </div>
                 </div>

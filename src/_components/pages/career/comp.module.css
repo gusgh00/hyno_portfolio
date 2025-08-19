@@ -121,6 +121,13 @@
                 font-weight: 500;
 
                 color: var(--fgColor-default);
+
+                .dot {
+                    width: 10px;
+                    height: 10px;
+
+                    color: var(--fgColor-secondary);
+                }
             }
         }
     }
