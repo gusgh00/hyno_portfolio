@@ -68,3 +68,39 @@
         }
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .home {
+        .home_main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .start_section {
+                width: 100%;
+            }
+
+            .end_section {
+                width: 340px;
+                display: flex;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .home {
+        .home_main {
+            gap: 10px;
+            .start_section {
+                transform: scale(0.6);
+            }
+
+            .end_section {
+                width: 340px;
+                display: flex;
+            }
+        }
+    }
+}

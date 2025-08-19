@@ -61,6 +61,34 @@
                     border: solid .5px var(--borderColor-disabled);
                 }
             }
+
+            .navi_select {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        .header_main {
+            padding: 0 20px;
+
+            .navi_section {
+                .navi {
+                    display: none;
+                }
+
+                .navi_select {
+                    width: 200px;
+
+                    display: block;
+
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
         }
     }
 }
