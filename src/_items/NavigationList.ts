@@ -43,22 +43,22 @@ export const navigationList: NavigationListInterface[] = [
             },
         ]
     },
-    {
-        name: "INTRODUCTION",
-        url: "/introduction",
-        sub: [
-            {
-                name: "EXPERIENCE",
-                href: "#page_04_01"
-            },
-            {
-                name: "PERSONALITY",
-                href: "#page_04_02"
-            },
-            {
-                name: "MY PLAN",
-                href: "#page_04_03"
-            },
-        ]
-    },
+    // {
+    //     name: "INTRODUCTION",
+    //     url: "/introduction",
+    //     sub: [
+    //         {
+    //             name: "EXPERIENCE",
+    //             href: "#page_04_01"
+    //         },
+    //         {
+    //             name: "PERSONALITY",
+    //             href: "#page_04_02"
+    //         },
+    //         {
+    //             name: "MY PLAN",
+    //             href: "#page_04_03"
+    //         },
+    //     ]
+    // },
 ]

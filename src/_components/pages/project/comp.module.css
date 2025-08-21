@@ -49,6 +49,8 @@
             align-items: center;
             justify-content: center;
 
+            transition: height 0.2s, visibility 0.2s;
+
             .icon_box {
                 width: 60px;
                 height: 60px;
@@ -96,7 +98,7 @@
                 background-size: cover;
                 background-position: center;
             }
-            
+
             &.background04 {
                 background: url("../../../../assets/imgs/project04.png");
                 background-repeat: repeat;
@@ -114,6 +116,7 @@
             flex-direction: column;
 
             overflow-y: auto;
+            transition: height 0.2s;
 
             .name {
                 font-size: 16px;
@@ -135,6 +138,19 @@
 
                     color: var(--fgColor-secondary);
                 }
+            }
+        }
+    }
+
+    &:has(.minimum) {
+        .info_box {
+            .banner_box {
+                height: 0;
+                visibility: hidden;
+            }
+
+            .desc_box {
+                height: calc(100% - 96px);
             }
         }
     }

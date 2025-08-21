@@ -1,21 +1,28 @@
 import styles from "./comp.module.css";
 import Link from "next/link";
+import { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { LuExternalLink } from "react-icons/lu";
+import useHeightStore from "@store/heightStore";
 
 const Project01 = () => {
+    const [isMiniImage, setMiniImage] = useState<boolean>(false)
+    const { isHeight } = useHeightStore()
     return (
         <>
             <div className={styles.project_main}>
                 <div className={styles.info_box}>
-                    <span className={styles.title}>🏆Care Bicycle Case (케바케)</span>
+                    <span className={styles.title}>🏆Care Bicycle Case</span>
                     <span className={styles.date}>2019.11</span>
-                    <div className={`${styles.banner_box} ${styles.background01}`}>
+                    <div className={`${styles.banner_box} ${styles.background01} ${isMiniImage && isHeight < 700 ? styles.minimum : "" }`}>
                         <Link href="https://ryuhyno.notion.site/2022-ICT-fd6e32e8db7f40fca590bfe4048fbdaf" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
                         </Link>
                     </div>
-                    <div className={styles.desc_box}>
+                    <div className={styles.desc_box}
+                        onMouseOver={() => setMiniImage(true)}
+                        onMouseOut={() => setMiniImage(false)}
+                    >
                         <span className={styles.name}>소개</span>
                         <span className={styles.desc}>아두이노와 라즈베리파이를 이용한 자전거 관리 시스템</span>
                         <span className={styles.name}>사용 언어 및 개발환경</span>

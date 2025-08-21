@@ -9,12 +9,14 @@ import { usePathname, useRouter } from "next/navigation";
 import useSchemeStore from "@store/schemeStore";
 import ActiveSelect from "@components/active/ActiveSelect";
 import useWidthStore from "@store/widthStore";
+import useHeightStore from "@store/heightStore";
 
 const Header = () => {
   const router = useRouter()
   const pathname = usePathname()
   const { isSchemeType, setSchemeType } = useSchemeStore()
   const { setIsWidth } = useWidthStore()
+  const { setIsHeight } = useHeightStore()
   const [isMenuSelect, setMenuSelect] = useState<number>(0)
 
   useEffect(() => {
@@ -47,6 +49,7 @@ const Header = () => {
     if (typeof window !== 'undefined') {
       const handleResize = () => {
         setIsWidth(window.innerWidth);
+        setIsHeight(window.innerHeight);
       };
       handleResize();
 

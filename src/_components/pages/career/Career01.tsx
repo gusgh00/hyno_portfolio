@@ -1,21 +1,28 @@
 import styles from "./comp.module.css";
 import Link from "next/link";
+import { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { LuExternalLink } from "react-icons/lu";
+import useHeightStore from "@store/heightStore";
 
 const Career01 = () => {
+    const [isMiniImage, setMiniImage] = useState<boolean>(false)
+    const { isHeight } = useHeightStore()
     return (
         <>
             <div className={styles.career_main}>
                 <div className={styles.info_box}>
                     <span className={styles.title}>바이비츠 (BY BEATS)</span>
                     <span className={styles.date}>2023.05.02 ~ 2024.07.31</span>
-                    <div className={`${styles.banner_box} ${styles.background01}`}>
+                    <div className={`${styles.banner_box} ${styles.background01} ${isMiniImage && isHeight < 700 ? styles.minimum : "" }`}>
                         <Link href="https://bybeats.com" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
                         </Link>
                     </div>
-                    <div className={styles.desc_box}>
+                    <div className={styles.desc_box}
+                        onMouseOver={() => setMiniImage(true)}
+                        onMouseOut={() => setMiniImage(false)}
+                    >
                         <span className={styles.name}>소개</span>
                         <span className={styles.desc}>B2C 웹서비스 (SaaS), 백오피스 서비스, 음원 클라우드 서비스, 음악 전문 기업, 전문 프로듀서와의 컨택 그리고 멘토링 서비스 제공</span>
                         <span className={styles.name}>사용 언어 및 개발환경</span>
