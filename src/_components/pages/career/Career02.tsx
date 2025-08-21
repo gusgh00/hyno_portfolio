@@ -17,9 +17,9 @@ const Career02 = () => {
                     </div>
                     <div className={styles.desc_box}>
                         <span className={styles.name}>소개</span>
-                        <span className={styles.desc}>작곡가 대상 게임 오디오 에셋 자동화 패키징 및 업로드 시스템</span>
+                        <span className={styles.desc}>백오피스 웹서비스, 오디오 에셋 (게임 에셋) 판매 사이트 업로드 및 패키징 자동화, 대용량 에셋 클라우드</span>
                         <span className={styles.name}>사용 언어 및 개발환경</span>
-                        <span className={styles.desc}>Vue.js, Vite, Vuetify, Typescript, PHP Laravel, Python</span>
+                        <span className={styles.desc}>Vue.js, Vuetify, Typescript, PHP Laravel, Python, GCP (Ubuntu), npm, nginx, Vite, php-fpm</span>
                         <span className={styles.name}>주요업무 및 상세역할</span>
                         <span className={styles.desc}>
                             <GoDotFill className={styles.dot} /> Pinia 상태 관리 적극 사용<br />
@@ -29,6 +29,11 @@ const Career02 = () => {
                             <GoDotFill className={styles.dot} /> 구글 스토리지 활용하여 음원 파일 패키징 (GCS)<br />
                             <GoDotFill className={styles.dot} /> 음원 컨버팅 및 포매팅 시스템 개발 (ffmpeg)<br />
                             <GoDotFill className={styles.dot} /> 원활한 자동화 시스템 가동을 위한 각 사이트 별 PC 환경 구축
+                        </span>
+                        <span className={styles.name}>성과</span>
+                        <span className={styles.desc}>
+                            <GoDotFill className={styles.dot} /> 자동화 시스템 개발 이후 수동 업로드 대비 3배 이상 효율<br />
+                            <GoDotFill className={styles.dot} /> 실용음악 학부 및 학과생 컨택 및 자작곡 음원 업로드<br />
                         </span>
                     </div>
                 </div>
