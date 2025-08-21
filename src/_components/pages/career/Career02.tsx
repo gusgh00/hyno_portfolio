@@ -1,21 +1,28 @@
 import styles from "./comp.module.css";
 import Link from "next/link";
+import { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { LuExternalLink } from "react-icons/lu";
+import useHeightStore from "@store/heightStore";
 
 const Career02 = () => {
+    const [isMiniImage, setMiniImage] = useState<boolean>(false)
+    const { isHeight } = useHeightStore()
     return (
         <>
             <div className={styles.career_main}>
                 <div className={styles.info_box}>
                     <span className={styles.title}>BGBP</span>
                     <span className={styles.date}>2024.01.08 ~ 2024.07.31</span>
-                    <div className={`${styles.banner_box} ${styles.background02}`}>
+                    <div className={`${styles.banner_box} ${styles.background02} ${isMiniImage && isHeight < 700 ? styles.minimum : "" }`}>
                         <Link href="https://beatsomeone.com" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
                         </Link>
                     </div>
-                    <div className={styles.desc_box}>
+                    <div className={styles.desc_box}
+                        onMouseOver={() => setMiniImage(true)}
+                        onMouseOut={() => setMiniImage(false)}
+                    >
                         <span className={styles.name}>소개</span>
                         <span className={styles.desc}>백오피스 웹서비스, 오디오 에셋 (게임 에셋) 판매 사이트 업로드 및 패키징 자동화, 대용량 에셋 클라우드</span>
                         <span className={styles.name}>사용 언어 및 개발환경</span>

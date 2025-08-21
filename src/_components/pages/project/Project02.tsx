@@ -1,21 +1,28 @@
+import useHeightStore from "@store/heightStore";
 import styles from "./comp.module.css";
 import Link from "next/link";
+import { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { LuExternalLink } from "react-icons/lu";
 
 const Project02 = () => {
+    const [isMiniImage, setMiniImage] = useState<boolean>(false)
+    const { isHeight } = useHeightStore()
     return (
         <>
             <div className={styles.project_main}>
                 <div className={styles.info_box}>
                     <span className={styles.title}>개미굴 가이드</span>
                     <span className={styles.date}>2024.12</span>
-                    <div className={`${styles.banner_box} ${styles.background02}`}>
+                    <div className={`${styles.banner_box} ${styles.background02} ${isMiniImage && isHeight < 700 ? styles.minimum : "" }`}>
                         <Link href="http://ryuhyno.notion.site/1601956b6163806f8f4ffdfb5f58ba29?pvs=74" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
                         </Link>
                     </div>
-                    <div className={styles.desc_box}>
+                    <div className={styles.desc_box}
+                        onMouseOver={() => setMiniImage(true)}
+                        onMouseOut={() => setMiniImage(false)}
+                    >
                         <span className={styles.name}>소개</span>
                         <span className={styles.desc}>오픈 API를 이용한 여행 스케줄링 가이드 프로젝트</span>
                         <span className={styles.name}>사용 언어 및 개발환경</span>
