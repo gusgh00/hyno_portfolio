@@ -60,6 +60,11 @@
                     background-color: var(--bgColor-opacity);
                     border: solid .5px var(--borderColor-disabled);
                 }
+
+                &.active {
+                    background-color: var(--bgColor-opacity);
+                    border: solid .5px var(--borderColor-disabled);
+                }
             }
 
             .navi_select {

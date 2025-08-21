@@ -4,6 +4,7 @@ import styles from "./comp.module.css";
 import { useState } from "react";
 import { FaArrowRotateLeft, FaCode } from "react-icons/fa6";
 import useSwiperStore from "@store/swiperStore";
+import useWidthStore from "@store/widthStore";
 
 const CodeBox = (props: {
     code: string
@@ -14,6 +15,8 @@ const CodeBox = (props: {
     const [isWindowClose, setWindowClose] = useState<boolean>(false)
 
     const { setIsSwiper } = useSwiperStore()
+    const { isWidth } = useWidthStore()
+
 
 
     const handleCopyText = async () => {
@@ -34,7 +37,7 @@ const CodeBox = (props: {
                     onMouseOut={() => setWindowBtn(false)}
                 >
                     <div className={styles.start_section}>
-                        {isWindowBtn
+                        {isWindowBtn && isWidth > 1600
                             ?
                             <>
                                 <FaTimesCircle className={styles.close_icon} onClick={() => setWindowClose(true)} />
@@ -51,7 +54,13 @@ const CodeBox = (props: {
                     </div>
                     <FaCode className={styles.code_title} />
                     <div className={styles.end_section}>
-                        <FaArrowRotateLeft className={styles.reset_icon} onClick={() => handleWindowReset()} />
+                        {
+                            isWidth > 1600
+                            ?
+                            <FaArrowRotateLeft className={styles.reset_icon} onClick={() => handleWindowReset()} />
+                            :
+                            null
+                        }
                         <FaRegCopy className={styles.copy_icon} onClick={() => handleCopyText()} />
                     </div>
                 </div>

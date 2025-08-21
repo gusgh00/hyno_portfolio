@@ -70,7 +70,7 @@ const Header = () => {
           </div>
           <div className={styles.navi_section}>
             {navigationList.map((item, index) => (
-              <div key={index} className={styles.navi} onClick={() => router.push(item.url)}>
+              <div key={index} className={`${styles.navi} ${pathname === item.url ? styles.active : ""}`} onClick={() => router.push(item.url)}>
                 {item.name}
               </div>
             ))}

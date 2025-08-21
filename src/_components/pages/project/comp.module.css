@@ -1,4 +1,4 @@
-.career_main {
+.project_main {
     width: 33vw;
     height: 100vh;
     margin: auto 0;
@@ -76,16 +76,28 @@
             }
 
             &.background01 {
-                background: url("../../../../assets/imgs/career01.jpg");
+                background: url("../../../../assets/imgs/project01.png");
                 background-repeat: repeat;
                 background-size: cover;
                 background-position: center;
             }
 
-            &.background02,
-            &.background03,
+            &.background02 {
+                background: url("../../../../assets/imgs/project02.png");
+                background-repeat: repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            &.background03 {
+                background: url("../../../../assets/imgs/project03.png");
+                background-repeat: repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            
             &.background04 {
-                background: url("../../../../assets/imgs/career02.png");
+                background: url("../../../../assets/imgs/project04.png");
                 background-repeat: repeat;
                 background-size: cover;
                 background-position: center;
@@ -128,7 +140,7 @@
 }
 
 @media screen and (max-width: 1600px) {
-    .career_main {
+    .project_main {
         width: 50vw;
         height: 100vh;
         margin: auto 0;
@@ -148,7 +160,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .career_main {
+    .project_main {
         width: 100vw;
         height: 100vh;
         margin: auto 0;
@@ -168,7 +180,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    .career_main {
+    .project_main {
         width: 100vw;
         height: 100vh;
         margin: auto 0;
