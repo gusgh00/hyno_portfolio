@@ -15,7 +15,7 @@ const Project = () => {
     return (
         <>
             <Swiper
-                spaceBetween={30}
+                spaceBetween={0}
                 slidesPerView={isWidth > 1600 ? 3 : (isWidth > 1000 ? 2 : 1)}
                 pagination={{
                     clickable: true,
