@@ -14,7 +14,7 @@ const Project02 = () => {
                 <div className={styles.info_box}>
                     <span className={styles.title}>개미굴 가이드</span>
                     <span className={styles.date}>2024.12</span>
-                    <div className={`${styles.banner_box} ${styles.background02} ${isMiniImage && isHeight < 700 ? styles.minimum : "" }`}>
+                    <div className={`${styles.banner_box} ${styles.background02} ${isMiniImage && isHeight < 800 ? styles.minimum : "" }`}>
                         <Link href="http://ryuhyno.notion.site/1601956b6163806f8f4ffdfb5f58ba29?pvs=74" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
                         </Link>

@@ -14,7 +14,7 @@ const Career01 = () => {
                 <div className={styles.info_box}>
                     <span className={styles.title}>바이비츠 (BY BEATS)</span>
                     <span className={styles.date}>2023.05.02 ~ 2024.07.31</span>
-                    <div className={`${styles.banner_box} ${styles.background01} ${isMiniImage && isHeight < 700 ? styles.minimum : "" }`}>
+                    <div className={`${styles.banner_box} ${styles.background01} ${isMiniImage && isHeight < 800 ? styles.minimum : "" }`}>
                         <Link href="https://bybeats.com" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
                         </Link>

@@ -14,7 +14,7 @@ const Project03 = () => {
                 <div className={styles.info_box}>
                     <span className={styles.title}>주식회사 엑시트</span>
                     <span className={styles.date}>2025.07</span>
-                    <div className={`${styles.banner_box} ${styles.background03} ${isMiniImage && isHeight < 700 ? styles.minimum : "" }`}>
+                    <div className={`${styles.banner_box} ${styles.background03} ${isMiniImage && isHeight < 800 ? styles.minimum : "" }`}>
                         <Link href="https://www.exitco.kr" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
                         </Link>
