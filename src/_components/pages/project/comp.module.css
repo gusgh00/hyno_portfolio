@@ -102,13 +102,6 @@
                 background-size: cover;
                 background-position: center;
             }
-
-            &.background05 {
-                background: url("../../../../assets/imgs/exit.png");
-                background-repeat: repeat;
-                background-size: cover;
-                background-position: center;
-            }
         }
 
         .desc_box {

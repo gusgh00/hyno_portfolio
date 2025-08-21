@@ -76,7 +76,7 @@
             }
 
             &.background01 {
-                background: url("../../../../assets/imgs/bybeats.jpg");
+                background: url("../../../../assets/imgs/career01.jpg");
                 background-repeat: repeat;
                 background-size: cover;
                 background-position: center;
@@ -85,14 +85,7 @@
             &.background02,
             &.background03,
             &.background04 {
-                background: url("../../../../assets/imgs/beatsomeone.png");
-                background-repeat: repeat;
-                background-size: cover;
-                background-position: center;
-            }
-
-            &.background05 {
-                background: url("../../../../assets/imgs/exit.png");
+                background: url("../../../../assets/imgs/career02.png");
                 background-repeat: repeat;
                 background-size: cover;
                 background-position: center;
