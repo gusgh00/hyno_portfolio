@@ -24,6 +24,10 @@ const Project02 = () => {
                         <span className={styles.desc}>
                             <GoDotFill className={styles.dot} /> zustand 상태 관리 사용<br />
                             <GoDotFill className={styles.dot} /> 지도 api 활용 (kakao map api)<br />
+                            <GoDotFill className={styles.dot} /> 대한민국 지역 선택 (SGIS API)<br />
+                            <GoDotFill className={styles.dot} /> 도보, 자전거 지오메트리 (MAP BOX API)<br />
+                            <GoDotFill className={styles.dot} /> 자가용 지오메트리 (KAKAO MOBILITY API)<br />
+                            <GoDotFill className={styles.dot} /> <span style={{ textDecoration: "line-through"}}>대중교통 지오메트리 (ODSAY API)</span><br />
                             <GoDotFill className={styles.dot} /> 장소 순서 변경 (@hello-pangea/dnd)<br />
                             <GoDotFill className={styles.dot} /> 데이트 피커 컴포넌트 제작 (date-fns, dayjs)<br />
                             <GoDotFill className={styles.dot} /> 결과 엑셀 파일 변환 (xlsx)<br />
