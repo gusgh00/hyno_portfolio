@@ -14,7 +14,9 @@ const TechStack01 = () => {
                         과정을 중요하게 여기어 <span className="font-success">플로우를 분석하며 복기</span>합니다.
                     </span>
                     <br/>
-                    <ActiveChip chipArr={['#Next.js', '#React.js', '# Vue.js', '#Vite', '#Zustand', '#HTML5', '#CSS3', '#Javascript', '#Typescript', '#php', '#Laravel', '#MySql', '#Postman', '#Python', '#Ubuntu', '#nginx', '#GCP', '#AWS', '#Git', '#Photoshop', '#Premiere Pro', '#After Effect']}/>
+                    <div className={styles.chips}>
+                        <ActiveChip chipArr={['#Next.js', '#React.js', '# Vue.js', '#Vite', '#Zustand', '#HTML5', '#CSS3', '#Javascript', '#Typescript', '#php', '#Laravel', '#MySql', '#Postman', '#Python', '#Ubuntu', '#nginx', '#GCP', '#AWS', '#Git', '#Photoshop', '#Premiere Pro', '#After Effect']}/>
+                    </div>
                 </div>
                 <div className={styles.tech_list}>
                     {Array(2).fill(

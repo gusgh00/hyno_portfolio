@@ -116,7 +116,7 @@
             .code_index {
                 width: 20px;
                 margin-right: 10px;
-                
+
                 display: inline-block;
                 text-align: end;
 
@@ -296,6 +296,14 @@
 
         .code {
             visibility: hidden;
+        }
+    }
+}
+
+@media screen and (max-height: 760px) {
+    .code_box {
+        .code_section {
+            height: 320px;
         }
     }
 }

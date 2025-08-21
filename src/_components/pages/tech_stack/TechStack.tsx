@@ -10,24 +10,28 @@ import ScrollDown from '@components/animation/ScrollDown';
 import useSwiperStore from '@store/swiperStore';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import useWidthStore from '@store/widthStore';
 
 const TechStack = () => {
     const swiperRef = useRef<SwiperRef | null>(null);
     const { isSwiper } = useSwiperStore()
+    const { isWidth } = useWidthStore()
 
     useEffect(() => {
-        if (isSwiper) {
-            swiperRef.current?.swiper.enable()
-        } else {
-            swiperRef.current?.swiper.disable()
+        if (isWidth > 1600) {
+            if (isSwiper) {
+                swiperRef.current?.swiper.enable()
+            } else {
+                swiperRef.current?.swiper.disable()
+            }
         }
-    }, [isSwiper])
+    }, [isSwiper, isWidth])
 
     return (
         <>
             <Swiper
                 ref={swiperRef}
-                direction={'vertical'}
+                direction={isWidth > 1600 ? 'vertical' : 'horizontal'}
                 mousewheel={true}
                 simulateTouch={false}
                 spaceBetween={30}
@@ -35,7 +39,15 @@ const TechStack = () => {
                 pagination={true}
                 modules={[Mousewheel, Pagination]}
             >
-                <SwiperSlide><TechStack01 /><ScrollDown /></SwiperSlide>
+                <SwiperSlide>
+                    <TechStack01 />
+                    {isWidth > 1600
+                        ?
+                        <ScrollDown />
+                        :
+                        null
+                    }
+                </SwiperSlide>
                 <SwiperSlide><TechStack02 /></SwiperSlide>
                 <SwiperSlide><TechStack03 /></SwiperSlide>
                 <SwiperSlide><TechStack04 /></SwiperSlide>

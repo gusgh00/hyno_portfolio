@@ -191,6 +191,8 @@
     gap: 80px;
 
     .description {
+        padding: 0 20px;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -292,15 +294,9 @@
 
 @media screen and (max-width: 1600px) {
     .tech_stack_main {
-        width: 100%;
-        max-width: 1600px;
-        height: 100vh;
-        margin: 0 auto;
         padding: 0 20px;
 
-        display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
 
         .start_section {
@@ -377,8 +373,10 @@
 
 @media screen and (max-width: 925px) {
     .tech_stack_01_main {
-        .tech_list {
-            display: none;
+        .description {
+            .chips {
+                display: none;
+            }
         }
     }
 }
