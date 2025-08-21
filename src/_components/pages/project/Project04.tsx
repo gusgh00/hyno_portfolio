@@ -14,7 +14,7 @@ const Project04 = () => {
                 <div className={styles.info_box}>
                     <span className={styles.title}>제미나이 디스코드 봇</span>
                     <span className={styles.date}>2025.07</span>
-                    <div className={`${styles.banner_box} ${styles.background04} ${isMiniImage && isHeight < 700 ? styles.minimum : "" }`}>
+                    <div className={`${styles.banner_box} ${styles.background04} ${isMiniImage && isHeight < 800 ? styles.minimum : "" }`}>
                         <Link href="https://discord.com/oauth2/authorize?client_id=1389839436824576030&permissions=8&integration_type=0&scope=bot" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
                         </Link>
