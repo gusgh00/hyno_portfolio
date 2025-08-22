@@ -32,8 +32,8 @@ const TechStack = () => {
             <Swiper
                 ref={swiperRef}
                 direction={isWidth > 1600 ? 'vertical' : 'horizontal'}
-                mousewheel={true}
-                simulateTouch={false}
+                mousewheel={isWidth > 1600}
+                simulateTouch={!(isWidth > 1600)}
                 spaceBetween={30}
                 slidesPerView={1}
                 pagination={true}
