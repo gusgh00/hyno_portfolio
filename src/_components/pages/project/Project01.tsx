@@ -13,7 +13,7 @@ const Project01 = () => {
             <div className={styles.project_main}>
                 <div className={styles.info_box}>
                     <span className={styles.title}>🏆Care Bicycle Case</span>
-                    <span className={styles.date}>2019.11</span>
+                    <span className={styles.date}>2022.11</span>
                     <div className={`${styles.banner_box} ${styles.background01} ${isMiniImage && isHeight < 800 ? styles.minimum : "" }`}>
                         <Link href="https://ryuhyno.notion.site/2022-ICT-fd6e32e8db7f40fca590bfe4048fbdaf" target="_blank" className={styles.icon_box}>
                             <LuExternalLink className={styles.icon} />
