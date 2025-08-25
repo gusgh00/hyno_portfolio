@@ -1,5 +1,9 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import { getMetadata } from "@utils/Metadata";
+import { Metadata } from "next";
+
+export const metadata: Metadata = getMetadata("HOME")
 
 export default function Home() {
   const jandiHynoArr = `
