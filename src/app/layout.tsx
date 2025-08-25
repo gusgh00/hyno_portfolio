@@ -2,25 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@components/header/Header";
 import Footer from "@components/footer/Footer";
+import { getMetadata } from "@utils/Metadata";
+import GoogleAnalytics from "@utils/GoogleAnalytics";
 
-export const metadata: Metadata = {
-  title: "HYNO PORTFOLIO",
-  description: "유현호의 프론트엔드 포트폴리오입니다.",
-  icons: {
-    icon: "/favicon.ico"
-  },
-  other: {
-    google: 'notranslate',
-  },
-  openGraph: {
-    siteName: "HYNO PORTFOLIO",
-    title: "HYNO PORTFOLIO",
-    description: "유현호의 프론트엔드 포트폴리오입니다.",
-    type: 'website',
-    url: "https://portfolio.hyno.kr",
-    locale: "ko_KR"
-  }
-};
+export const metadata: Metadata = getMetadata("HOME")
 
 export default function RootLayout({
   children,
@@ -30,6 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en" translate="no">
       <body>
+        {/*GA 영역*/}
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}/>
+        ) : null}
+        {/*GA 영역*/}
         <Header />
         {children}
         <Footer />
